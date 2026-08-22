@@ -1,0 +1,494 @@
+
+<HTML>
+<HEAD>
+<TITLE>EA Racing</TITLE>
+
+
+
+<script language="javascript">
+<!--
+var sAgent = window.navigator.userAgent;
+var nVer   = parseInt(sAgent.charAt(sAgent.indexOf("/")+1),10);
+var isIE   = false;
+var isNS   = false;
+
+if (nVer > 3) {
+  if (sAgent.indexOf("MSIE") > 0) {
+    isIE = true;
+  } else {
+    isNS = true;
+  }
+} else {
+    window.location = "not4browser.html";
+}
+
+// Create an array of all DIVs in the menu
+var arrMenuDIVs = new Array( "divHomeClosed", "divHomeOpen", "divAccountSetupClosed", "divAccountSetupOpen",  "divRulesClosed", "divRulesOpen", "divFeedbackClosed", "divFeedbackOpen", "divGamesClosed", "divGamesOpen", "divLogos" );
+
+
+// Place all of the menu DIVs where they belong.
+function init() {
+if (isIE)
+	{
+        document.all.divHomeClosed.style.posTop = 130;
+        document.all.divHomeOpen.style.posTop = 130;
+        
+        document.all.divAccountSetupClosed.style.posTop = 170;
+        document.all.divAccountSetupOpen.style.posTop = 170;
+        
+        document.all.divRulesClosed.style.posTop = 210;
+        document.all.divRulesOpen.style.posTop = 210;
+        
+        document.all.divFeedbackClosed.style.posTop = 250;
+        document.all.divFeedbackOpen.style.posTop = 250;
+        
+        document.all.divGamesClosed.style.posTop = 290;
+        document.all.divGamesOpen.style.posTop = 290;
+        
+        document.all.divLogos.style.posTop = 350;
+	}
+}
+
+
+
+
+function sMenu(lyr,px) {
+// Open and close the menus
+	var lyrPair;
+	
+	
+	if (lyr == 0 || lyr == 2 || lyr == 4 || lyr == 6 || lyr == 8)
+		{
+		lyrPair = lyr++;
+		arith = '+';
+		highLayer = lyr;
+		}
+	else
+		{
+		lyrPair = lyr--;
+		arith = '-';
+		highLayer = lyrPair;
+		}
+	
+	if (isNS)
+		{
+		eval('document.layers["'+arrMenuDIVs[lyr]+'"].visibility = "show"');
+		eval('document.layers["'+arrMenuDIVs[lyrPair]+'"].visibility = "hide"');
+		
+		for ( i = (highLayer + 1); i < (arrMenuDIVs.length); i++ )
+			{
+			eval('document.layers["'+arrMenuDIVs[i]+'"].pageY = document.layers["'+arrMenuDIVs[i]+'"].pageY'+arith+'px');
+			}
+		}
+	else
+		{
+		eval('document.all.'+arrMenuDIVs[lyr]+'.style.visibility = "visible"');
+		eval('document.all.'+arrMenuDIVs[lyrPair]+'.style.visibility = "hidden"');
+	
+		for ( i = (highLayer + 1); i < (arrMenuDIVs.length); i++ )
+			{
+			eval('document.all.'+arrMenuDIVs[i]+'.style.posTop = document.all.'+arrMenuDIVs[i]+'.style.posTop'+arith+'px');
+			}
+		}
+}
+
+
+
+
+function Legal(URL) {
+if (confirm('\nTerms & Conditions of Downloading Materials\n\nThe materials provided on this web site are provided "as is", without warranties of any kind. Electronic Arts, its subsidiaries, divisions, affiliaties and licensors ("EA") disclaim all warranties, either express or implied, including but not limited to, warranties of merchantability and fitness for a particular purpose.\n\nThere are inherent dangers in the use of any materials available for downloading on the Internet, and you are cautioned to make sure that you completely understand the potential risks before downloading any materials. You are solely responsible for adequate protection and backup of the data and equipment used in connection with any of the materials. To the extent allowed by applicable law, in no event will EA be liable for damages of any kind that may be incurred with your hardware, peripherals or software programs.\n\nYou may download one copy of the materials on any single computer for your personal, non-commercial, home use only, provided you keep intact all copyright and other proprietary notices. No materials from this web site may be copied, reproduced, modified, republished, uploaded, posted, transmitted or distributed in any way, without prior written consent of EA. Unauthorized use of the materials is a violation of EA\'s copyright and constitutes infringement of EA\'s proprietary rights.\n\n To accept this agreement and proceed with download click "OK" or click "Cancel" to decline.'))
+  window.location = URL;
+}
+
+function goPopup(url) {
+	var cpWin;
+	cpWin = window.open(url,'','top=50,left=50,width=500,height=400');
+}
+//-->
+</script>
+
+<style type="text/css">
+BODY			{ font-family:Verdana,Arial,Helvetica; color:#FFFFFF; font-size:12px; }
+TD			{ font-family:Verdana,Arial,Helvetica; color:#FFFFFF; font-size:12px; }
+A			{ font-family:Verdana,Arial,Helvetica; color:#FFCC00; font-size:12px; }
+A:hover			{ color:#FFFF99;}
+.Tiny			{ font-family:Verdana,Arial,Helvetica; color:#FFFFFF; font-size:10px; }
+.Small			{ font-family:Verdana,Arial,Helvetica; color:#FFFFFF; font-size:11px; }
+.Normal			{ font-family:Verdana,Arial,Helvetica; color:#FFFFFF; font-size:12px; }
+.Title			{ font-family:Verdana,Arial,Helvetica; color:#FFFFFF; font-size:12px; font-weight:bold; }
+.important	{ font-family:Verdana,Arial,Helvetica; color:#FFFFFF; font-size:14px; font-weight:bold; }
+.reallybig	{ font-family:Verdana,Arial,Helvetica; color:#FFFFFF; font-size:16px; font-weight:bold; }
+
+#divHomeClosed		{ position:absolute; top:130; left:12; width:127; z-index:40; }
+#divAccountSetupClosed	{ position:absolute; top:170; left:12; width:127; z-index:40; }
+#divRulesClosed		{ position:absolute; top:210; left:12; width:127; z-index:40; }
+#divFeedbackClosed	{ position:absolute; top:250; left:12; width:127; z-index:40; }
+#divGamesClosed		{ position:absolute; top:290; left:12; width:127; z-index:40; }
+
+#divLogos		{ position:absolute;top:350;left:12;width:127;z-index:40; }
+</style>
+
+<script language="javascript">
+
+var sHid = "hidden";
+var nPx = 9;
+var nPxB = 8;
+
+if (isNS) {sHid = "hide";nPx = 10;nPxB = 9;};
+
+document.write ('<style type="text/css">');
+
+document.write ('a.aClsMenu		{ font-family:Verdana,Arial,Helvetica;color:#FFCC00;font-size:'+nPx+'px;line-height:12px;text-decoration:none;}')
+document.write ('a.aClsMenu:hover	{ color:#FFFF99;}')
+document.write ('a.aClsSubMenu		{ font-family:Verdana,Arial,Helvetica;color:#FFFF00;font-size:'+nPxB+'px;line-height:12px;text-decoration:none;}')
+document.write ('a.aClsSubMenu:hover	{ color:#FFFF99;}')
+
+document.write ('#divHomeOpen		{ position:absolute; top:130; left:12; width:127; z-index:42;visibility:'+sHid+';}')
+document.write ('#divAccountSetupOpen	{ position:absolute; top:170; left:12; width:127; z-index:42;visibility:'+sHid+';}')
+document.write ('#divRulesOpen		{ position:absolute; top:210; left:12; width:127; z-index:42;visibility:'+sHid+';}')
+document.write ('#divFeedbackOpen	{ position:absolute; top:250; left:12; width:127; z-index:42;visibility:'+sHid+';}')
+document.write ('#divGamesOpen		{ position:absolute; top:290; left:12; width:127; z-index:42;visibility:'+sHid+';}')
+
+document.write ('</style>');
+</script>
+
+
+<!--sMenu(0,33)-->
+</HEAD>
+
+<BODY onLoad="init();sMenu(4,46);" BGCOLOR="#000000" LINK="0000FF" ALINK="FF0000" VLINK="FF00FF" MARGINWIDTH="0" MARGINHEIGHT="0" TOPMARGIN="0" LEFTMARGIN="0">
+
+
+
+
+ <!-- LEFT MENU ELEMENTS -->
+ 
+
+
+<!--     Home    -->
+
+<DIV ID="divHomeClosed">
+  <IMG SRC="images/m_cl_top_grey.gif" WIDTH=127 HEIGHT=8><BR>
+  <NOBR><A HREF="Home.html"><IMG ID="imgHome" SRC="images/home_grey.gif" WIDTH="106" HEIGHT="11" BORDER=0></A><IMG NAME="imgHomeArr" SRC="images/blackpix.gif" WIDTH=11 HEIGHT=11 BORDER=0><IMG SRC="images/m_cl_right_grey.gif" WIDTH=10 HEIGHT=11></NOBR><BR>
+  <IMG SRC="images/m_cl_bottom_grey.gif" WIDTH=127 HEIGHT=8><BR>
+</DIV>
+
+<DIV ID="divHomeOpen">
+  <IMG SRC="images/m_cl_top_grey.gif" WIDTH=127 HEIGHT=8><BR>
+  <NOBR><A HREF="Home.html"><IMG ID="imgHome" SRC="images/home_grey.gif" WIDTH="106" HEIGHT="11" BORDER=0></A><IMG NAME="imgHomeArr" SRC="images/blackpix.gif" WIDTH=11 HEIGHT=11 BORDER=0><IMG SRC="images/m_cl_right_grey.gif" WIDTH=10 HEIGHT=11></NOBR><BR>
+  <IMG SRC="images/m_cl_bottom_grey.gif" WIDTH=127 HEIGHT=8><BR>
+</DIV>
+
+
+<!--     Account Setup    -->
+
+<DIV ID="divAccountSetupClosed">
+  <IMG SRC="images/m_cl_top_grey.gif" WIDTH=127 HEIGHT=8><BR>
+  <NOBR><A HREF="Account.html"><IMG ID="imgAccountSetup" SRC="images/AccountSetup_grey.gif" WIDTH="106" HEIGHT="11" BORDER=0></A><A HREF="javascript:sMenu(2,56)"><IMG NAME="imgAccountSetupArr" SRC="images/greyarrow.gif" WIDTH=11 HEIGHT=11 BORDER=0></A><IMG SRC="images/m_cl_right_grey.gif" WIDTH=10 HEIGHT=11></NOBR><BR>
+  <IMG SRC="images/m_cl_bottom_grey.gif" WIDTH=127 HEIGHT=8><BR>
+</DIV>
+
+<DIV ID="divAccountSetupOpen">
+        <IMG SRC="images/m_op_top.gif" WIDTH="127" HEIGHT="12"><BR>
+	<TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0><TR><TD BGCOLOR="#000000">
+		<A HREF="Account.html"><IMG SRC="images/AccountSetup_yellow.gif" WIDTH="106" HEIGHT="11" BORDER=0></A><A HREF="javascript:sMenu(3,56)"
+		><IMG SRC="images/yellarrow.gif" WIDTH=11 HEIGHT=11 BORDER=0></A><IMG SRC="images/blank.gif" BORDER="0" WIDTH="9" HEIGHT="11" ALT=""><BR>
+
+     	      <FONT CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A HREF="Account__func__cgi_eacustomer_create__do__show.html" CLASS="aClsMenu">Create Account</A><BR>
+     	      <FONT CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A HREF="Account__func__cgi_eacustomer_add_game__do__show.html" CLASS="aClsMenu">Add Game</A><BR>
+     	      <FONT CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A HREF="Account__func__cgi_eacustomer_edit__do__show.html" CLASS="aClsMenu">Edit Account</A><BR>
+	      <FONT CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A HREF="Account__func__cgi_eacustomer_forgot_password__do__show.html" CLASS="aClsMenu">Forget Password?</A><BR>
+
+	</TD>
+	<TD BGCOLOR="#FFCC00"><IMG SRC="images/blank.gif" WIDTH=1 HEIGHT=1></TD>
+	</TR></TABLE>
+        <IMG SRC="images/m_op_bottom.gif" WIDTH="127" HEIGHT="12"><BR>
+</DIV>
+
+
+<!--    Rules of the Road     -->
+
+<DIV ID="divRulesClosed">
+  <IMG SRC="images/m_cl_top_grey.gif" WIDTH=127 HEIGHT=8><BR>
+  <NOBR><A HREF="RulesOfTheRoad.html"><IMG NAME="imgRules" SRC="images/rules_grey.gif" WIDTH="106" HEIGHT="11" BORDER=0></A><A HREF="javascript:sMenu(4,46)"><IMG NAME="imgRulesArr" SRC="images/greyarrow.gif" WIDTH=11 HEIGHT=11 BORDER=0></A><IMG SRC="images/m_cl_right_grey.gif" WIDTH=10 HEIGHT=11></NOBR><BR>
+  <IMG SRC="images/m_cl_bottom_grey.gif" WIDTH=127 HEIGHT=8><BR>
+</DIV>
+
+<DIV ID="divRulesOpen">
+        <IMG SRC="images/m_op_top.gif" WIDTH="127" HEIGHT="12"><BR>
+	<TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0><TR><TD BGCOLOR="#000000">
+		<A HREF="RulesOfTheRoad.html"><IMG SRC="images/rules_yellow.gif" WIDTH="106" HEIGHT="11" BORDER=0></A><A HREF="javascript:sMenu(5,46)"
+		><IMG SRC="images/yellarrow.gif" WIDTH=11 HEIGHT=11 BORDER=0></A><IMG SRC="images/blank.gif" BORDER="0" WIDTH="9" HEIGHT="11" ALT=""><BR>
+		<FONT CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A HREF="FAQ.html" CLASS="aClsMenu">FAQ</A><BR>
+		<FONT CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A HREF="Rules.html" CLASS="aClsMenu">Conduct Policy</A><BR>
+		<FONT CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A HREF="Games.html" CLASS="aClsMenu" TARGET="Terms">Terms of Service</A><BR>
+	</TD>
+	<TD BGCOLOR="#FFCC00"><IMG SRC="images/blank.gif" WIDTH=1 HEIGHT=1></TD>
+	</TR></TABLE>
+        <IMG SRC="images/m_op_bottom.gif" WIDTH="127" HEIGHT="12"><BR>
+</DIV>
+
+
+<!--     Feedback    -->
+
+<DIV ID="divFeedbackClosed">
+  <IMG SRC="images/m_cl_top_grey.gif" WIDTH=127 HEIGHT=8><BR>
+  <NOBR><A HREF="Feedback.html"><IMG ID="imgFeedback" SRC="images/Community_grey.gif" WIDTH="106" HEIGHT="11" BORDER=0></A><IMG NAME="imgFeedbackArr" SRC="images/blackpix.gif" WIDTH=11 HEIGHT=11 BORDER=0><IMG SRC="images/m_cl_right_grey.gif" WIDTH=10 HEIGHT=11></NOBR><BR>
+  <IMG SRC="images/m_cl_bottom_grey.gif" WIDTH=127 HEIGHT=8><BR>
+</DIV>
+
+<DIV ID="divFeedbackOpen">
+  <IMG SRC="images/m_cl_top_grey.gif" WIDTH=127 HEIGHT=8><BR>
+  <NOBR><A HREF="Feedback.html"><IMG ID="imgFeedback" SRC="images/Community_grey.gif" WIDTH="106" HEIGHT="11" BORDER=0></A><IMG NAME="imgFeedbackArr" SRC="images/blackpix.gif" WIDTH=11 HEIGHT=11 BORDER=0><IMG SRC="images/m_cl_right_grey.gif" WIDTH=10 HEIGHT=11></NOBR><BR>
+  <IMG SRC="images/m_cl_bottom_grey.gif" WIDTH=127 HEIGHT=8><BR>
+</DIV>
+
+
+<!--    Games     -->
+
+<DIV ID="divGamesClosed">
+  <IMG SRC="images/m_cl_top_grey.gif" WIDTH=127 HEIGHT=8><BR>
+  <NOBR><A HREF="Games.html"><IMG NAME="Games" SRC="images/Games_Grey.gif" WIDTH=106 HEIGHT=11 BORDER=0></A><A HREF="javascript:sMenu(8,33);"><IMG NAME="imgGamesArr" SRC="images/greyarrow.gif" WIDTH=11 HEIGHT=11 BORDER=0></A><IMG SRC="images/m_cl_right_grey.gif" WIDTH=10 HEIGHT=11></NOBR><BR>
+  <IMG SRC="images/m_cl_bottom_grey.gif" WIDTH=127 HEIGHT=8><BR>
+</DIV>
+
+<DIV ID="divGamesOpen">
+        <IMG SRC="images/m_op_top.gif" WIDTH="127" HEIGHT="12"><BR>
+	<TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0><TR><TD BGCOLOR="#000000">
+		<A HREF="Games.html"><IMG SRC="images/Games_Yellow.gif" WIDTH=106 HEIGHT=11 BORDER=0></A><A HREF="javascript:sMenu(9,33);"
+		><IMG SRC="images/yellarrow.gif" WIDTH=11 HEIGHT=11 BORDER=0></A><IMG SRC="images/blank.gif" BORDER="0" WIDTH="9" HEIGHT="11" ALT=""><BR>
+	      <FONT CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A HREF="HighStakes.html" CLASS="aClsMenu">High Stakes</A><BR>
+	      <FONT CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A HREF="PorscheUnleashed.html" CLASS="aClsMenu">Porsche Unleashed</A><BR>
+	      <!--FONT CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A HREF="MotorCity.html" CLASS="aClsMenu">Motor City</A><BR-->
+	</TD>
+	<TD BGCOLOR="#FFCC00"><IMG SRC="images/blank.gif" WIDTH=1 HEIGHT=1></TD>
+	</TR></TABLE>
+        <IMG SRC="images/m_op_bottom.gif" WIDTH="127" HEIGHT="12"><BR>
+</DIV>
+
+
+
+<!--    Logos -->
+
+
+<DIV ID="divLogos">
+	<CENTER>
+	<A HREF="Games.html" CLASS="aClsMenu" TARGET="_blank"><IMG SRC="images/icon-E.gif" WIDTH="40" HEIGHT="56" BORDER=0></A><BR>
+	<BR>
+	<A HREF="Games.html" CLASS="aClsMenu" TARGET="_blank">©2000 Electronic Arts Inc.<BR>All rights reserved</A><BR>
+	<BR>
+	<A HREF="Games.html" CLASS="aClsMenu" TARGET="_blank"><IMG SRC="images/new_privacycertified.jpg" WIDTH=116 HEIGHT=43 BORDER=0 ALT="Privacy Policy"></A><BR>
+        <A HREF="Games.html" CLASS="aClsMenu" TARGET="_blank">Privacy policy</A><BR>
+	<BR>
+	<A HREF="Games.html" CLASS="aClsMenu" TARGET="Terms">Use of this site is subject to the following Terms of Service.</A>
+	</CENTER>
+</DIV>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<TABLE BGCOLOR="#FFCC00" WIDTH="790" BORDER="0" CELLPADDING="0" CELLSPACING="0"><TR><TD><IMG SRC="images/blank.gif" BORDER="0" WIDTH="1" HEIGHT="1" ALT=""></TD></TR></TABLE>
+
+<TABLE BGCOLOR="#000000" WIDTH="790" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<TR><TD BACKGROUND="images/topbg.gif">
+	<IMG SRC="images/earacinglogo.jpg" BORDER="0" WIDTH="233" HEIGHT="59" ALT=""
+></TD></TR></TABLE>
+
+<TABLE BGCOLOR="#000000" WIDTH="790" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<TR><TD
+	><NOBR><IMG SRC="images/hm_Cars1.jpg" BORDER="0" WIDTH="151" HEIGHT="54" ALT=""
+	><IMG SRC="images/hm_headRulesOfTheRoad.jpg" BORDER="0" WIDTH="293" HEIGHT="54" ALT=""
+
+	><IMG SRC="images/hm_Cars4.jpg" BORDER="0" WIDTH="71" HEIGHT="54" ALT=""
+	><IMG SRC="images/hm_Cars5.jpg" BORDER="0" WIDTH="75" HEIGHT="54" ALT=""
+	><IMG SRC="images/hm_Cars6.jpg" BORDER="0" WIDTH="75" HEIGHT="54" ALT=""
+	><IMG SRC="images/hm_Cars7.jpg" BORDER="0" WIDTH="73" HEIGHT="54" ALT=""
+	><IMG SRC="images/hm_Cars8.jpg" BORDER="0" WIDTH="52" HEIGHT="54" ALT=""
+></NOBR></TD></TR></TABLE>
+
+<TABLE HEIGHT="110%" WIDTH="790" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<TD BACKGROUND="images/checkerbg.jpg"><IMG SRC="images/blank.gif" BORDER="0" WIDTH="12" HEIGHT="1" ALT=""></TD>
+<TD BACKGROUND="images/leftbg.jpg"><IMG SRC="images/blank.gif" BORDER="0" WIDTH="139" HEIGHT="1" ALT=""></TD>
+<TD BACKGROUND="images/middlebg.jpg" BGCOLOR="#858585" VALIGN="TOP">
+	<!-- Begin Main Body -->
+	<IMG SRC="images/blank.gif" BORDER="0" WIDTH="488" HEIGHT="1" ALT=""><BR>
+<IMG SRC="images/hm_subFAQ.gif" BORDER="0" WIDTH="330" HEIGHT="32" ALT=""><br>
+
+
+<TABLE WIDTH="100%" CELLPADDING=0 CELLSPACING=0 BORDER=0>
+<TR>
+<TD><IMG SRC="images/blank.gif" BORDER="0" WIDTH="15" HEIGHT="1" ALT=""></TD>
+<TD>
+
+	<SPAN CLASS="Normal">
+	Welcome to EA Racing's Frequently Asked Questions guide. We hope the information
+	here is useful in the event you have questions or experience difficulty racing
+	online.
+	<BR><BR>
+
+<SPAN CLASS="Title">Q:  Where is my CD Key Located?</SPAN><br>
+A:  The CD Key is no longer needed to create an account or register for
+online racing.  This step has been removed from the account registration
+process.  If this has prevented you from registering in the past, try again
+now!
+<BR><BR>
+<SPAN CLASS="Title">Q:  Where do I find the download cars?</SPAN><br>
+A:  Visit our download cars page by clicking here <link to download cars
+page>.  
+
+<BR><BR>
+<SPAN CLASS="Title">Q:  I am having difficulty downloading cars.  Sometimes the download will stop and give me the message "Connection with server timed out" in the middle.  The site does not resume broken downloads either so I have to
+start all over again.</SPAN><br>
+A:  Due to the overwhelming popularity of the download cars, the server
+occasionally cannot keep up with the traffic.  The only solution is to try
+again.
+
+<BR><BR>
+<SPAN CLASS="Title">Q:  I can't use download cars with the new NFS:HS patch.  Why is this?</SPAN><br>
+A:  The latest patch was intended to improve online racing by preventing
+the use of modified 'cheat' cars among other things.  It has had the
+unfortunate side effect of preventing the use of 'unofficial' download cars
+in the single player game as well.  If you wish to use these type of cars
+with your game, you will need to reinstall the game without the latest
+patch.  Please note that this will prevent you from participating in online
+racing, however.
+
+<BR><BR>
+<SPAN CLASS="Title">Q:  I get a "Racing Servers are not responding.  (-1)" when I try to go
+online with earacing.  What gives?</SPAN><br>
+A:  This means that your computer is unable to reach the EA Racing servers.
+This could be because the servers are down, you aren't connected to the
+Internet, you have a bad install, or you don't have a route to the servers.
+<BR><BR>
+If this error appears after the persona selection screen, then the servers
+are probably down.  Please send email to earacing@ea.com and let us know.
+<BR><BR>
+If it appears when you enter your user name and password, then you probably
+can't locate the machines.  To verify this, bring up a DOS prompt and enter
+the command 'ping login.earacing.com'.  If you get a reply, then the
+servers are up and something else is the problem.  Again, send mail to
+earacing@ea.com and let us know your exact configuration so we can try to
+help you.  If you don't get a response, contact your ISP and ask them to
+try and help you figure out why you can't see the machines.
+
+<BR><BR>
+<SPAN CLASS="Title">Q:  All my points are gone!  The server reset them to zero.  What happened?</SPAN><br>
+A:  This error is caused by a communications problem between your computer
+and the EA Racing servers.  If you get this error, back out to the login
+screen and try again.  DO NOT race if this appears, or your point loss will
+be permanent.  If you back out and log in again, your points should
+reappear.
+
+<BR><BR>
+<SPAN CLASS="Title">Q:  I never received email confirmations for my racing user names.  It's
+been ## days/weeks/months since I registered my account!  When should I
+expect them?</SPAN><br>
+A:  They should have come right away.  Please send mail to earacing@ea.com,
+giving the user name you entered, and we'll send you your password again.
+
+<BR><BR>
+<SPAN CLASS="Title">Q:  When I sign up for a new earacing account I receive an Internal Server
+Error.</SPAN><br>
+A:  This is caused by an abort in the program that creates the account.
+Your account may or may not have been created.  If this happens, please
+send mail to earacing@ea.com giving the name you were attempting to create
+and we'll let you know if the account was created.
+
+<BR><BR>
+<SPAN CLASS="Title">Q:  I've just downloaded the new 4.44 patch and when I attempt to log on
+from the game I receive an "Unknown Error".   This happens when the game is
+"Checking for Updates" and I am unable to connect.</SPAN><br>
+A:  If you receive this error, please send us an email describing the
+problem and containing a copy of your Push_Log.txt and PBA_Log.txt files so
+that we may investigate the problem.  These files can be found in your NFS
+4 directory, wherever you may have installed it.  
+
+<BR><BR>
+<SPAN CLASS="Title">Q:  When I try to connect I keep getting error messages that the user
+name/password are invalid. </SPAN><br>
+A:  User names and passwords are case sensitive.  This means that the name
+John is different than the names JOHN, john, and JohN.  Check your spelling
+and case and try again.  Is the caps lock light on?  If you're still having
+trouble, please send mail to earacing@ea.com giving the name you were
+attempting to use and we'll let you know if it's correct. 
+	<BR><BR>
+
+	<SPAN CLASS="Title">Q: What is the Online Racing Beta Program?</SPAN><BR>
+	A: The Online Racing Beta Program allows our customers to play Need for Speed
+	High Stakes online while we develop and fine-tune our Internet racing technology
+	for future products.
+	<BR><BR>
+
+	<SPAN CLASS="Title">Q: How do I join EARacing?</SPAN><BR>
+	A: Simply create an account by visiting our Account Setup pages.
+	<BR><BR>
+
+	<SPAN CLASS="Title">Q: How much does EA Racing membership cost?</SPAN><BR>
+	A: EA Racing membership is free. You just need to own a copy of Need for Speed
+	High Stakes or Need for Speed Porsche Unleashed and
+	have Internet access in order to play online.
+	<BR><BR>
+
+	<SPAN CLASS="Title">Q: Sometimes when I play, the cars seem to "warp" or "pop" on and off of the
+	track. What causes this?</SPAN><BR>
+	A: When you race online, you may see cars "warp" or pop in and out of play along
+	the track. This is a known issue inherent to our positional updating system.
+	We're working very diligently to remedy this problem and present a smooth racing
+	experience.
+	<BR><BR>
+
+	<SPAN CLASS="Title">Q: What is latency?</SPAN><BR>
+	A: Latency is essentially the time it takes for information to travel from one
+	source to another and the effect that amount of time has on a user's experience.
+	<BR><BR>
+
+	When you experience high latency, you'll see a notable delay or difference
+	between what you input as to what you see happen onscreen; sometimes cars will
+	warp, you might see other cars jump from one place to another, etc.
+	<BR><BR>
+
+	When you experience low latency, you'll note that your input and what happens
+	onscreen are somewhat simultaneous: less car warping takes place, etc.
+	<BR><BR>
+
+	For those playing Need for Speed High Stakes over the Internet, there is a
+	latency indicator next to each player's name.  When your indicator is green, it
+	means your latency is low and that you'll see good results playing. Yellow means
+	you're experiencing a moderate amount of latency while a red indicator shows
+	that your latency is high and you might see some adverse effects racing.
+	<BR><BR>
+
+	Latency can be caused by heavy Internet traffic, your connection speed, your
+	ISP, amount of traffic being handled by the racing server, etc.
+	<BR><BR>
+
+	We're doing our best to reduce the impact of latency issues on the gaming
+	experience of EA Racing.
+	</SPAN>
+	<BR><BR>
+</TD>
+<TD><IMG SRC="images/blank.gif" BORDER="0" WIDTH="15" HEIGHT="1" ALT=""></TD>
+</TR>
+</TABLE>
+<!-- End Main Body -->
+</TD>
+<TD BACKGROUND="images/rightbg.jpg"><IMG SRC="images/blank.gif" BORDER="0" WIDTH="139" HEIGHT="1" ALT=""></TD>
+<TD BACKGROUND="images/checkerbg.jpg"><IMG SRC="images/blank.gif" BORDER="0" WIDTH="12" HEIGHT="1" ALT=""></TD>
+</TR></TABLE>
+</BODY>
+</HTML>

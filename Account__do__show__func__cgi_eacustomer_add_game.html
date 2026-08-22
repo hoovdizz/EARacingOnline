@@ -1,0 +1,389 @@
+
+<HTML>
+<HEAD>
+<TITLE>EA Racing</TITLE>
+
+
+
+<script language="javascript">
+<!--
+var sAgent = window.navigator.userAgent;
+var nVer   = parseInt(sAgent.charAt(sAgent.indexOf("/")+1),10);
+var isIE   = false;
+var isNS   = false;
+
+if (nVer > 3) {
+  if (sAgent.indexOf("MSIE") > 0) {
+    isIE = true;
+  } else {
+    isNS = true;
+  }
+} else {
+    window.location = "not4browser.html";
+}
+
+// Create an array of all DIVs in the menu
+var arrMenuDIVs = new Array( "divHomeClosed", "divHomeOpen", "divAccountSetupClosed", "divAccountSetupOpen",  "divRulesClosed", "divRulesOpen", "divFeedbackClosed", "divFeedbackOpen", "divGamesClosed", "divGamesOpen", "divLogos" );
+
+
+// Place all of the menu DIVs where they belong.
+function init() {
+if (isIE)
+	{
+        document.all.divHomeClosed.style.posTop = 130;
+        document.all.divHomeOpen.style.posTop = 130;
+        
+        document.all.divAccountSetupClosed.style.posTop = 170;
+        document.all.divAccountSetupOpen.style.posTop = 170;
+        
+        document.all.divRulesClosed.style.posTop = 210;
+        document.all.divRulesOpen.style.posTop = 210;
+        
+        document.all.divFeedbackClosed.style.posTop = 250;
+        document.all.divFeedbackOpen.style.posTop = 250;
+        
+        document.all.divGamesClosed.style.posTop = 290;
+        document.all.divGamesOpen.style.posTop = 290;
+        
+        document.all.divLogos.style.posTop = 350;
+	}
+}
+
+
+
+
+function sMenu(lyr,px) {
+// Open and close the menus
+	var lyrPair;
+	
+	
+	if (lyr == 0 || lyr == 2 || lyr == 4 || lyr == 6 || lyr == 8)
+		{
+		lyrPair = lyr++;
+		arith = '+';
+		highLayer = lyr;
+		}
+	else
+		{
+		lyrPair = lyr--;
+		arith = '-';
+		highLayer = lyrPair;
+		}
+	
+	if (isNS)
+		{
+		eval('document.layers["'+arrMenuDIVs[lyr]+'"].visibility = "show"');
+		eval('document.layers["'+arrMenuDIVs[lyrPair]+'"].visibility = "hide"');
+		
+		for ( i = (highLayer + 1); i < (arrMenuDIVs.length); i++ )
+			{
+			eval('document.layers["'+arrMenuDIVs[i]+'"].pageY = document.layers["'+arrMenuDIVs[i]+'"].pageY'+arith+'px');
+			}
+		}
+	else
+		{
+		eval('document.all.'+arrMenuDIVs[lyr]+'.style.visibility = "visible"');
+		eval('document.all.'+arrMenuDIVs[lyrPair]+'.style.visibility = "hidden"');
+	
+		for ( i = (highLayer + 1); i < (arrMenuDIVs.length); i++ )
+			{
+			eval('document.all.'+arrMenuDIVs[i]+'.style.posTop = document.all.'+arrMenuDIVs[i]+'.style.posTop'+arith+'px');
+			}
+		}
+}
+
+
+
+
+function Legal(URL) {
+if (confirm('\nTerms & Conditions of Downloading Materials\n\nThe materials provided on this web site are provided "as is", without warranties of any kind. Electronic Arts, its subsidiaries, divisions, affiliaties and licensors ("EA") disclaim all warranties, either express or implied, including but not limited to, warranties of merchantability and fitness for a particular purpose.\n\nThere are inherent dangers in the use of any materials available for downloading on the Internet, and you are cautioned to make sure that you completely understand the potential risks before downloading any materials. You are solely responsible for adequate protection and backup of the data and equipment used in connection with any of the materials. To the extent allowed by applicable law, in no event will EA be liable for damages of any kind that may be incurred with your hardware, peripherals or software programs.\n\nYou may download one copy of the materials on any single computer for your personal, non-commercial, home use only, provided you keep intact all copyright and other proprietary notices. No materials from this web site may be copied, reproduced, modified, republished, uploaded, posted, transmitted or distributed in any way, without prior written consent of EA. Unauthorized use of the materials is a violation of EA\'s copyright and constitutes infringement of EA\'s proprietary rights.\n\n To accept this agreement and proceed with download click "OK" or click "Cancel" to decline.'))
+  window.location = URL;
+}
+
+function goPopup(url) {
+	var cpWin;
+	cpWin = window.open(url,'','top=50,left=50,width=500,height=400');
+}
+//-->
+</script>
+
+<style type="text/css">
+BODY			{ font-family:Verdana,Arial,Helvetica; color:#FFFFFF; font-size:12px; }
+TD			{ font-family:Verdana,Arial,Helvetica; color:#FFFFFF; font-size:12px; }
+A			{ font-family:Verdana,Arial,Helvetica; color:#FFCC00; font-size:12px; }
+A:hover			{ color:#FFFF99;}
+.Tiny			{ font-family:Verdana,Arial,Helvetica; color:#FFFFFF; font-size:10px; }
+.Small			{ font-family:Verdana,Arial,Helvetica; color:#FFFFFF; font-size:11px; }
+.Normal			{ font-family:Verdana,Arial,Helvetica; color:#FFFFFF; font-size:12px; }
+.Title			{ font-family:Verdana,Arial,Helvetica; color:#FFFFFF; font-size:12px; font-weight:bold; }
+.important	{ font-family:Verdana,Arial,Helvetica; color:#FFFFFF; font-size:14px; font-weight:bold; }
+.reallybig	{ font-family:Verdana,Arial,Helvetica; color:#FFFFFF; font-size:16px; font-weight:bold; }
+
+#divHomeClosed		{ position:absolute; top:130; left:12; width:127; z-index:40; }
+#divAccountSetupClosed	{ position:absolute; top:170; left:12; width:127; z-index:40; }
+#divRulesClosed		{ position:absolute; top:210; left:12; width:127; z-index:40; }
+#divFeedbackClosed	{ position:absolute; top:250; left:12; width:127; z-index:40; }
+#divGamesClosed		{ position:absolute; top:290; left:12; width:127; z-index:40; }
+
+#divLogos		{ position:absolute;top:350;left:12;width:127;z-index:40; }
+</style>
+
+<script language="javascript">
+
+var sHid = "hidden";
+var nPx = 9;
+var nPxB = 8;
+
+if (isNS) {sHid = "hide";nPx = 10;nPxB = 9;};
+
+document.write ('<style type="text/css">');
+
+document.write ('a.aClsMenu		{ font-family:Verdana,Arial,Helvetica;color:#FFCC00;font-size:'+nPx+'px;line-height:12px;text-decoration:none;}')
+document.write ('a.aClsMenu:hover	{ color:#FFFF99;}')
+document.write ('a.aClsSubMenu		{ font-family:Verdana,Arial,Helvetica;color:#FFFF00;font-size:'+nPxB+'px;line-height:12px;text-decoration:none;}')
+document.write ('a.aClsSubMenu:hover	{ color:#FFFF99;}')
+
+document.write ('#divHomeOpen		{ position:absolute; top:130; left:12; width:127; z-index:42;visibility:'+sHid+';}')
+document.write ('#divAccountSetupOpen	{ position:absolute; top:170; left:12; width:127; z-index:42;visibility:'+sHid+';}')
+document.write ('#divRulesOpen		{ position:absolute; top:210; left:12; width:127; z-index:42;visibility:'+sHid+';}')
+document.write ('#divFeedbackOpen	{ position:absolute; top:250; left:12; width:127; z-index:42;visibility:'+sHid+';}')
+document.write ('#divGamesOpen		{ position:absolute; top:290; left:12; width:127; z-index:42;visibility:'+sHid+';}')
+
+document.write ('</style>');
+</script>
+
+
+<!--sMenu(0,33)-->
+</HEAD>
+
+<BODY onLoad="init();sMenu(2,56);" BGCOLOR="#000000" LINK="0000FF" ALINK="FF0000" VLINK="FF00FF" MARGINWIDTH="0" MARGINHEIGHT="0" TOPMARGIN="0" LEFTMARGIN="0">
+
+
+
+
+ <!-- LEFT MENU ELEMENTS -->
+ 
+
+
+<!--     Home    -->
+
+<DIV ID="divHomeClosed">
+  <IMG SRC="images/m_cl_top_grey.gif" WIDTH=127 HEIGHT=8><BR>
+  <NOBR><A HREF="Home.html"><IMG ID="imgHome" SRC="images/home_grey.gif" WIDTH="106" HEIGHT="11" BORDER=0></A><IMG NAME="imgHomeArr" SRC="images/blackpix.gif" WIDTH=11 HEIGHT=11 BORDER=0><IMG SRC="images/m_cl_right_grey.gif" WIDTH=10 HEIGHT=11></NOBR><BR>
+  <IMG SRC="images/m_cl_bottom_grey.gif" WIDTH=127 HEIGHT=8><BR>
+</DIV>
+
+<DIV ID="divHomeOpen">
+  <IMG SRC="images/m_cl_top_grey.gif" WIDTH=127 HEIGHT=8><BR>
+  <NOBR><A HREF="Home.html"><IMG ID="imgHome" SRC="images/home_grey.gif" WIDTH="106" HEIGHT="11" BORDER=0></A><IMG NAME="imgHomeArr" SRC="images/blackpix.gif" WIDTH=11 HEIGHT=11 BORDER=0><IMG SRC="images/m_cl_right_grey.gif" WIDTH=10 HEIGHT=11></NOBR><BR>
+  <IMG SRC="images/m_cl_bottom_grey.gif" WIDTH=127 HEIGHT=8><BR>
+</DIV>
+
+
+<!--     Account Setup    -->
+
+<DIV ID="divAccountSetupClosed">
+  <IMG SRC="images/m_cl_top_grey.gif" WIDTH=127 HEIGHT=8><BR>
+  <NOBR><A HREF="Account.html"><IMG ID="imgAccountSetup" SRC="images/AccountSetup_grey.gif" WIDTH="106" HEIGHT="11" BORDER=0></A><A HREF="javascript:sMenu(2,56)"><IMG NAME="imgAccountSetupArr" SRC="images/greyarrow.gif" WIDTH=11 HEIGHT=11 BORDER=0></A><IMG SRC="images/m_cl_right_grey.gif" WIDTH=10 HEIGHT=11></NOBR><BR>
+  <IMG SRC="images/m_cl_bottom_grey.gif" WIDTH=127 HEIGHT=8><BR>
+</DIV>
+
+<DIV ID="divAccountSetupOpen">
+        <IMG SRC="images/m_op_top.gif" WIDTH="127" HEIGHT="12"><BR>
+	<TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0><TR><TD BGCOLOR="#000000">
+		<A HREF="Account.html"><IMG SRC="images/AccountSetup_yellow.gif" WIDTH="106" HEIGHT="11" BORDER=0></A><A HREF="javascript:sMenu(3,56)"
+		><IMG SRC="images/yellarrow.gif" WIDTH=11 HEIGHT=11 BORDER=0></A><IMG SRC="images/blank.gif" BORDER="0" WIDTH="9" HEIGHT="11" ALT=""><BR>
+
+     	      <FONT CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A HREF="Account__func__cgi_eacustomer_create__do__show.html" CLASS="aClsMenu">Create Account</A><BR>
+     	      <FONT CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A HREF="Account__func__cgi_eacustomer_add_game__do__show.html" CLASS="aClsMenu">Add Game</A><BR>
+     	      <FONT CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A HREF="Account__func__cgi_eacustomer_edit__do__show.html" CLASS="aClsMenu">Edit Account</A><BR>
+	      <FONT CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A HREF="Account__func__cgi_eacustomer_forgot_password__do__show.html" CLASS="aClsMenu">Forget Password?</A><BR>
+
+	</TD>
+	<TD BGCOLOR="#FFCC00"><IMG SRC="images/blank.gif" WIDTH=1 HEIGHT=1></TD>
+	</TR></TABLE>
+        <IMG SRC="images/m_op_bottom.gif" WIDTH="127" HEIGHT="12"><BR>
+</DIV>
+
+
+<!--    Rules of the Road     -->
+
+<DIV ID="divRulesClosed">
+  <IMG SRC="images/m_cl_top_grey.gif" WIDTH=127 HEIGHT=8><BR>
+  <NOBR><A HREF="RulesOfTheRoad.html"><IMG NAME="imgRules" SRC="images/rules_grey.gif" WIDTH="106" HEIGHT="11" BORDER=0></A><A HREF="javascript:sMenu(4,46)"><IMG NAME="imgRulesArr" SRC="images/greyarrow.gif" WIDTH=11 HEIGHT=11 BORDER=0></A><IMG SRC="images/m_cl_right_grey.gif" WIDTH=10 HEIGHT=11></NOBR><BR>
+  <IMG SRC="images/m_cl_bottom_grey.gif" WIDTH=127 HEIGHT=8><BR>
+</DIV>
+
+<DIV ID="divRulesOpen">
+        <IMG SRC="images/m_op_top.gif" WIDTH="127" HEIGHT="12"><BR>
+	<TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0><TR><TD BGCOLOR="#000000">
+		<A HREF="RulesOfTheRoad.html"><IMG SRC="images/rules_yellow.gif" WIDTH="106" HEIGHT="11" BORDER=0></A><A HREF="javascript:sMenu(5,46)"
+		><IMG SRC="images/yellarrow.gif" WIDTH=11 HEIGHT=11 BORDER=0></A><IMG SRC="images/blank.gif" BORDER="0" WIDTH="9" HEIGHT="11" ALT=""><BR>
+		<FONT CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A HREF="FAQ.html" CLASS="aClsMenu">FAQ</A><BR>
+		<FONT CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A HREF="Rules.html" CLASS="aClsMenu">Conduct Policy</A><BR>
+		<FONT CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A HREF="Games.html" CLASS="aClsMenu" TARGET="Terms">Terms of Service</A><BR>
+	</TD>
+	<TD BGCOLOR="#FFCC00"><IMG SRC="images/blank.gif" WIDTH=1 HEIGHT=1></TD>
+	</TR></TABLE>
+        <IMG SRC="images/m_op_bottom.gif" WIDTH="127" HEIGHT="12"><BR>
+</DIV>
+
+
+<!--     Feedback    -->
+
+<DIV ID="divFeedbackClosed">
+  <IMG SRC="images/m_cl_top_grey.gif" WIDTH=127 HEIGHT=8><BR>
+  <NOBR><A HREF="Feedback.html"><IMG ID="imgFeedback" SRC="images/Community_grey.gif" WIDTH="106" HEIGHT="11" BORDER=0></A><IMG NAME="imgFeedbackArr" SRC="images/blackpix.gif" WIDTH=11 HEIGHT=11 BORDER=0><IMG SRC="images/m_cl_right_grey.gif" WIDTH=10 HEIGHT=11></NOBR><BR>
+  <IMG SRC="images/m_cl_bottom_grey.gif" WIDTH=127 HEIGHT=8><BR>
+</DIV>
+
+<DIV ID="divFeedbackOpen">
+  <IMG SRC="images/m_cl_top_grey.gif" WIDTH=127 HEIGHT=8><BR>
+  <NOBR><A HREF="Feedback.html"><IMG ID="imgFeedback" SRC="images/Community_grey.gif" WIDTH="106" HEIGHT="11" BORDER=0></A><IMG NAME="imgFeedbackArr" SRC="images/blackpix.gif" WIDTH=11 HEIGHT=11 BORDER=0><IMG SRC="images/m_cl_right_grey.gif" WIDTH=10 HEIGHT=11></NOBR><BR>
+  <IMG SRC="images/m_cl_bottom_grey.gif" WIDTH=127 HEIGHT=8><BR>
+</DIV>
+
+
+<!--    Games     -->
+
+<DIV ID="divGamesClosed">
+  <IMG SRC="images/m_cl_top_grey.gif" WIDTH=127 HEIGHT=8><BR>
+  <NOBR><A HREF="Games.html"><IMG NAME="Games" SRC="images/Games_Grey.gif" WIDTH=106 HEIGHT=11 BORDER=0></A><A HREF="javascript:sMenu(8,33);"><IMG NAME="imgGamesArr" SRC="images/greyarrow.gif" WIDTH=11 HEIGHT=11 BORDER=0></A><IMG SRC="images/m_cl_right_grey.gif" WIDTH=10 HEIGHT=11></NOBR><BR>
+  <IMG SRC="images/m_cl_bottom_grey.gif" WIDTH=127 HEIGHT=8><BR>
+</DIV>
+
+<DIV ID="divGamesOpen">
+        <IMG SRC="images/m_op_top.gif" WIDTH="127" HEIGHT="12"><BR>
+	<TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0><TR><TD BGCOLOR="#000000">
+		<A HREF="Games.html"><IMG SRC="images/Games_Yellow.gif" WIDTH=106 HEIGHT=11 BORDER=0></A><A HREF="javascript:sMenu(9,33);"
+		><IMG SRC="images/yellarrow.gif" WIDTH=11 HEIGHT=11 BORDER=0></A><IMG SRC="images/blank.gif" BORDER="0" WIDTH="9" HEIGHT="11" ALT=""><BR>
+	      <FONT CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A HREF="HighStakes.html" CLASS="aClsMenu">High Stakes</A><BR>
+	      <FONT CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A HREF="PorscheUnleashed.html" CLASS="aClsMenu">Porsche Unleashed</A><BR>
+	      <!--FONT CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A HREF="MotorCity.html" CLASS="aClsMenu">Motor City</A><BR-->
+	</TD>
+	<TD BGCOLOR="#FFCC00"><IMG SRC="images/blank.gif" WIDTH=1 HEIGHT=1></TD>
+	</TR></TABLE>
+        <IMG SRC="images/m_op_bottom.gif" WIDTH="127" HEIGHT="12"><BR>
+</DIV>
+
+
+
+<!--    Logos -->
+
+
+<DIV ID="divLogos">
+	<CENTER>
+	<A HREF="Games.html" CLASS="aClsMenu" TARGET="_blank"><IMG SRC="images/icon-E.gif" WIDTH="40" HEIGHT="56" BORDER=0></A><BR>
+	<BR>
+	<A HREF="Games.html" CLASS="aClsMenu" TARGET="_blank">©2000 Electronic Arts Inc.<BR>All rights reserved</A><BR>
+	<BR>
+	<A HREF="Games.html" CLASS="aClsMenu" TARGET="_blank"><IMG SRC="images/new_privacycertified.jpg" WIDTH=116 HEIGHT=43 BORDER=0 ALT="Privacy Policy"></A><BR>
+        <A HREF="Games.html" CLASS="aClsMenu" TARGET="_blank">Privacy policy</A><BR>
+	<BR>
+	<A HREF="Games.html" CLASS="aClsMenu" TARGET="Terms">Use of this site is subject to the following Terms of Service.</A>
+	</CENTER>
+</DIV>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<TABLE BGCOLOR="#FFCC00" WIDTH="790" BORDER="0" CELLPADDING="0" CELLSPACING="0"><TR><TD><IMG SRC="images/blank.gif" BORDER="0" WIDTH="1" HEIGHT="1" ALT=""></TD></TR></TABLE>
+
+<TABLE BGCOLOR="#000000" WIDTH="790" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<TR><TD BACKGROUND="images/topbg.gif">
+	<IMG SRC="images/earacinglogo.jpg" BORDER="0" WIDTH="233" HEIGHT="59" ALT=""
+></TD></TR></TABLE>
+
+<TABLE BGCOLOR="#000000" WIDTH="790" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<TR><TD
+	><NOBR><IMG SRC="images/hm_Cars1.jpg" BORDER="0" WIDTH="151" HEIGHT="54" ALT=""
+	><IMG SRC="images/hm_headAccountSetup.jpg" BORDER="0" WIDTH="219" HEIGHT="54" ALT=""
+
+><IMG SRC="images/hm_Cars3.jpg" BORDER="0" WIDTH="74" HEIGHT="54" ALT=""	><IMG SRC="images/hm_Cars4.jpg" BORDER="0" WIDTH="71" HEIGHT="54" ALT=""
+	><IMG SRC="images/hm_Cars5.jpg" BORDER="0" WIDTH="75" HEIGHT="54" ALT=""
+	><IMG SRC="images/hm_Cars6.jpg" BORDER="0" WIDTH="75" HEIGHT="54" ALT=""
+	><IMG SRC="images/hm_Cars7.jpg" BORDER="0" WIDTH="73" HEIGHT="54" ALT=""
+	><IMG SRC="images/hm_Cars8.jpg" BORDER="0" WIDTH="52" HEIGHT="54" ALT=""
+></NOBR></TD></TR></TABLE>
+
+<TABLE HEIGHT="110%" WIDTH="790" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<TD BACKGROUND="images/checkerbg.jpg"><IMG SRC="images/blank.gif" BORDER="0" WIDTH="12" HEIGHT="1" ALT=""></TD>
+<TD BACKGROUND="images/leftbg.jpg"><IMG SRC="images/blank.gif" BORDER="0" WIDTH="139" HEIGHT="1" ALT=""></TD>
+<TD BACKGROUND="images/middlebg.jpg" BGCOLOR="#858585" VALIGN="TOP">
+	<!-- Begin Main Body -->
+	<IMG SRC="images/blank.gif" BORDER="0" WIDTH="488" HEIGHT="1" ALT=""><BR>
+<IMG SRC="images/hm_subAddGame.gif" BORDER="0" WIDTH="111" HEIGHT="32" ALT="">
+
+<TABLE WIDTH="100%" CELLPADDING=0 CELLSPACING=0 BORDER=0>
+
+<FORM NAME="cgi_eacustomer_add_game" METHOD=POST ACTION="Account.html">
+<INPUT TYPE="HIDDEN" NAME=func VALUE="cgi_eacustomer_add_game">
+<INPUT TYPE="HIDDEN" NAME=do VALUE="auth">
+<TR>
+<TD><IMG SRC="images/blank.gif" BORDER="0" WIDTH="15" HEIGHT="1" ALT=""></TD>
+<TD VALIGN="TOP">
+	<SPAN CLASS="Normal">
+	
+	You must create an EA Racing account to race online.  If you haven't already, 
+	please <A HREF="Account__do__show__func__cgi_eacustomer_create.html">create</A> a new EA Racing account now.
+	<BR><BR>
+	
+	If you already have an account and would like to add one of the games featured 
+	on EA Racing to your account, please sign-in by filling out the following form.
+	<BR><BR>
+
+	Please take a moment to review our <A HREF="Games.html" TARGET="Privacy">Privacy Policy</A>
+	before signing-in.
+	<BR><BR>
+
+	<TABLE WIDTH=330 CELLPADDING=2 CELLSPACING=0 BORDER=0>
+	<TR>
+	<TD WIDTH=165> 
+	<FONT CLASS="Small"><B>EA RACING ACCOUNT:<BR></B></FONT>
+	</TD>
+	<TD WIDTH=165>
+	<INPUT NAME="eacustomer[USERNAME]" TYPE=TEXT SIZE=20 MAXLENGTH=31><BR>
+	</TD>
+	</TR>
+	<TR>
+	<TD WIDTH=165> 
+	<FONT CLASS="Small"><B>PASSWORD:<BR></B></FONT>
+	</TD>
+	<TD WIDTH=165>
+	<INPUT NAME="eacustomer[PASSWORD]" TYPE="PASSWORD" SIZE=20 MAXLENGTH=31><BR>
+	</TD>
+	</TR>
+	</TABLE>
+
+	
+	<BR><CENTER><INPUT TYPE="IMAGE" SRC="images/hm_btnContinue.gif" BORDER="0" WIDTH="80" HEIGHT="21"></CENTER><BR><BR>
+</TD>
+<TD><IMG SRC="images/blank.gif" BORDER="0" WIDTH="15" HEIGHT="1" ALT=""></TD>
+</TR>
+</TABLE>        
+
+</FORM>
+
+<BR><BR><BR>
+<!-- End Main Body -->
+</TD>
+<TD BACKGROUND="images/rightbg.jpg"><IMG SRC="images/blank.gif" BORDER="0" WIDTH="139" HEIGHT="1" ALT=""></TD>
+<TD BACKGROUND="images/checkerbg.jpg"><IMG SRC="images/blank.gif" BORDER="0" WIDTH="12" HEIGHT="1" ALT=""></TD>
+</TR></TABLE>
+</BODY>
+</HTML>
