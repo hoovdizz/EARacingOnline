@@ -22,7 +22,7 @@ if (nVer > 3) {
 }
 
 // Create an array of all DIVs in the menu
-var arrMenuDIVs = new Array( "divOnlineRacingClosed", "divOnlineRacingOpen", "divAccountSetupClosed", "divAccountSetupOpen", "divDownloadsClosed", "divDownloadsOpen", "divLinksClosed", "divLinksOpen", "divFeedbackClosed", "divFeedbackOpen", "divGamesClosed", "divGamesOpen", "divLogos" );
+var arrMenuDIVs = new Array( "divOnlineRacingClosed", "divOnlineRacingOpen", "divTopRacersClosed", "divTopRacersOpen", "divAccountSetupClosed", "divAccountSetupOpen", "divDownloadsClosed", "divDownloadsOpen", "divLinksClosed", "divLinksOpen", "divFeedbackClosed", "divFeedbackOpen", "divGamesClosed", "divGamesOpen", "divLogos" );
 
 
 // Place all of the menu DIVs where they belong.
@@ -32,68 +32,55 @@ if (isIE)
         document.all.divOnlineRacingClosed.style.posTop = 130;
         document.all.divOnlineRacingOpen.style.posTop = 130;
 
-        document.all.divAccountSetupClosed.style.posTop = 170;
-        document.all.divAccountSetupOpen.style.posTop = 170;
+        document.all.divTopRacersClosed.style.posTop = 170;
+        document.all.divTopRacersOpen.style.posTop = 170;
 
-        document.all.divDownloadsClosed.style.posTop = 210;
-        document.all.divDownloadsOpen.style.posTop = 210;
+        document.all.divAccountSetupClosed.style.posTop = 210;
+        document.all.divAccountSetupOpen.style.posTop = 210;
 
-        document.all.divLinksClosed.style.posTop = 250;
-        document.all.divLinksOpen.style.posTop = 250;
+        document.all.divDownloadsClosed.style.posTop = 250;
+        document.all.divDownloadsOpen.style.posTop = 250;
 
-        document.all.divFeedbackClosed.style.posTop = 290;
-        document.all.divFeedbackOpen.style.posTop = 290;
+        document.all.divLinksClosed.style.posTop = 290;
+        document.all.divLinksOpen.style.posTop = 290;
 
-        document.all.divGamesClosed.style.posTop = 330;
-        document.all.divGamesOpen.style.posTop = 330;
+        document.all.divFeedbackClosed.style.posTop = 330;
+        document.all.divFeedbackOpen.style.posTop = 330;
 
-        document.all.divLogos.style.posTop = 390;
+        document.all.divGamesClosed.style.posTop = 370;
+        document.all.divGamesOpen.style.posTop = 370;
+
+        document.all.divLogos.style.posTop = 430;
 	}
 }
 
 
-
-
 function sMenu(lyr,px) {
-// Open and close the menus
-	var lyrPair;
+	// Open and close a menu pair using standards supported by modern browsers.
+	var opening = (lyr % 2 === 0);
+	var showIndex = opening ? lyr + 1 : lyr - 1;
+	var hideIndex = lyr;
+	var highLayer = opening ? showIndex : lyr;
+	var showLayer = document.getElementById(arrMenuDIVs[showIndex]);
+	var hideLayer = document.getElementById(arrMenuDIVs[hideIndex]);
+	var delta = opening ? px : -px;
+	var i, layer, currentTop;
 
+	if (!showLayer || !hideLayer) return false;
 
-	if (lyr == 0 || lyr == 2 || lyr == 4 || lyr == 6 || lyr == 8 || lyr == 10 || lyr == 12 || lyr == 14)
-		{
-		lyrPair = lyr++;
-		arith = '+';
-		highLayer = lyr;
-		}
-	else
-		{
-		lyrPair = lyr--;
-		arith = '-';
-		highLayer = lyrPair;
-		}
+	showLayer.style.visibility = "visible";
+	hideLayer.style.visibility = "hidden";
 
-	if (isNS)
-		{
-		eval('document.layers["'+arrMenuDIVs[lyr]+'"].visibility = "show"');
-		eval('document.layers["'+arrMenuDIVs[lyrPair]+'"].visibility = "hide"');
+	for (i = highLayer + 1; i < arrMenuDIVs.length; i++) {
+		layer = document.getElementById(arrMenuDIVs[i]);
+		if (!layer) continue;
+		currentTop = parseFloat(window.getComputedStyle(layer).top);
+		if (isNaN(currentTop)) currentTop = layer.offsetTop;
+		layer.style.top = (currentTop + delta) + "px";
+	}
 
-		for ( i = (highLayer + 1); i < (arrMenuDIVs.length); i++ )
-			{
-			eval('document.layers["'+arrMenuDIVs[i]+'"].pageY = document.layers["'+arrMenuDIVs[i]+'"].pageY'+arith+'px');
-			}
-		}
-	else
-		{
-		eval('document.all.'+arrMenuDIVs[lyr]+'.style.visibility = "visible"');
-		eval('document.all.'+arrMenuDIVs[lyrPair]+'.style.visibility = "hidden"');
-
-		for ( i = (highLayer + 1); i < (arrMenuDIVs.length); i++ )
-			{
-			eval('document.all.'+arrMenuDIVs[i]+'.style.posTop = document.all.'+arrMenuDIVs[i]+'.style.posTop'+arith+'px');
-			}
-		}
+	return false;
 }
-
 
 
 
@@ -119,15 +106,15 @@ A:hover			{ color:#FFCC00;}
 .Normal		{ font-family:Verdana,Arial,Helvetica; color:#FFFFFF; font-size:12px; }
 .Title		{ font-family:Verdana,Arial,Helvetica; color:#FFFFFF; font-size:12px; font-weight:bold; }
 
-#divOnlineRacingClosed	{ position:absolute; top:130; left:12; width:127; z-index:40; }
-#divAccountSetupClosed	{ position:absolute; top:170; left:12; width:127; z-index:40; }
-#divDownloadsClosed	{ position:absolute; top:210; left:12; width:127; z-index:40; }
-#divLinksClosed		{ position:absolute; top:250; left:12; width:127; z-index:40; }
-#divFeedbackClosed	{ position:absolute; top:290; left:12; width:127; z-index:40; }
-#divGamesClosed		{ position:absolute; top:330; left:12; width:127; z-index:40; }
+#divOnlineRacingClosed	{ position:absolute; top:130px; left:12px; width:127px; z-index:40; }
+#divTopRacersClosed	{ position:absolute; top:170px; left:12px; width:127px; z-index:40; }
+#divAccountSetupClosed	{ position:absolute; top:210px; left:12px; width:127px; z-index:40; }
+#divDownloadsClosed	{ position:absolute; top:250px; left:12px; width:127px; z-index:40; }
+#divLinksClosed		{ position:absolute; top:290px; left:12px; width:127px; z-index:40; }
+#divFeedbackClosed	{ position:absolute; top:330px; left:12px; width:127px; z-index:40; }
+#divGamesClosed		{ position:absolute; top:370px; left:12px; width:127px; z-index:40; }
 
-#divLogos		{ position:absolute;top:390;left:12;width:127;z-index:40; }
-</style>
+#divLogos		{ position:absolute;top:430px;left:12px;width:127px;z-index:40; }</style>
 
 <script language="javascript">
 
@@ -135,7 +122,7 @@ var sHid = "hidden";
 var nPx = 9;
 var nPxB = 8;
 
-if (isNS) {sHid = "hide";nPx = 10;nPxB = 9;};
+if (document.layers) {sHid = "hide";nPx = 10;nPxB = 9;};
 
 document.write ('<style type="text/css">');
 
@@ -144,13 +131,13 @@ document.write ('a.aClsMenu:hover	{ color:#FFFF99;}')
 document.write ('a.aClsSubMenu		{ font-family:Verdana,Arial,Helvetica;color:#FFFF00;font-size:'+nPxB+'px;line-height:12px;text-decoration:none;}')
 document.write ('a.aClsSubMenu:hover	{ color:#FFFF99;}')
 
-document.write ('#divOnlineRacingOpen	{ position:absolute; top:130; left:12; width:127; z-index:42;visibility:'+sHid+';}')
-document.write ('#divAccountSetupOpen	{ position:absolute; top:170; left:12; width:127; z-index:42;visibility:'+sHid+';}')
-document.write ('#divDownloadsOpen	{ position:absolute; top:210; left:12; width:127; z-index:42;visibility:'+sHid+';}')
-document.write ('#divLinksOpen		{ position:absolute; top:250; left:12; width:127; z-index:42;visibility:'+sHid+';}')
-document.write ('#divFeedbackOpen	{ position:absolute; top:290; left:12; width:127; z-index:42;visibility:'+sHid+';}')
-document.write ('#divGamesOpen		{ position:absolute; top:330; left:12; width:127; z-index:42;visibility:'+sHid+';}')
-
+document.write ('#divOnlineRacingOpen	{ position:absolute; top:130px; left:12px; width:127px; z-index:42;visibility:'+sHid+';}')
+document.write ('#divTopRacersOpen	{ position:absolute; top:170px; left:12px; width:127px; z-index:42;visibility:'+sHid+';}')
+document.write ('#divAccountSetupOpen	{ position:absolute; top:210px; left:12px; width:127px; z-index:42;visibility:'+sHid+';}')
+document.write ('#divDownloadsOpen	{ position:absolute; top:250px; left:12px; width:127px; z-index:42;visibility:'+sHid+';}')
+document.write ('#divLinksOpen		{ position:absolute; top:290px; left:12px; width:127px; z-index:42;visibility:'+sHid+';}')
+document.write ('#divFeedbackOpen	{ position:absolute; top:330px; left:12px; width:127px; z-index:42;visibility:'+sHid+';}')
+document.write ('#divGamesOpen		{ position:absolute; top:370px; left:12px; width:127px; z-index:42;visibility:'+sHid+';}')
 document.write ('</style>');
 </script>
 
@@ -158,7 +145,7 @@ document.write ('</style>');
 
 </HEAD>
 
-<BODY onLoad="init();sMenu(4,92);" BGCOLOR="#000000" LINK="0000FF" ALINK="FF0000" VLINK="FF00FF" MARGINWIDTH="0" MARGINHEIGHT="0" TOPMARGIN="0" LEFTMARGIN="0">
+<BODY onLoad="init();sMenu(6,92);" BGCOLOR="#000000" LINK="0000FF" ALINK="FF0000" VLINK="FF00FF" MARGINWIDTH="0" MARGINHEIGHT="0" TOPMARGIN="0" LEFTMARGIN="0">
 
 
 
@@ -197,6 +184,24 @@ document.write ('</style>');
 	</TR></TABLE>
         <IMG SRC="images/m_op_bottom.gif" WIDTH="127" HEIGHT="12"><BR>
 </DIV>
+<DIV ID="divTopRacersClosed">
+  <IMG SRC="images/m_cl_top_blue.gif" WIDTH=127 HEIGHT=8><BR>
+  <NOBR><A HREF="HS_Top50.html"><IMG ID="imgTopRacers" SRC="images/TopRacers_green.gif" WIDTH="106" HEIGHT="11" BORDER=0></A><A HREF="javascript:sMenu(2,33)"><IMG NAME="imgTopRacersArr" SRC="images/bluearrow.gif" WIDTH=11 HEIGHT=11 BORDER=0></A><IMG SRC="images/m_cl_right_blue.gif" WIDTH=10 HEIGHT=11></NOBR><BR>
+  <IMG SRC="images/m_cl_bottom_blue.gif" WIDTH=127 HEIGHT=8><BR>
+</DIV>
+
+<DIV ID="divTopRacersOpen">
+        <IMG SRC="images/m_op_top.gif" WIDTH="127" HEIGHT="12"><BR>
+	<TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0><TR><TD BGCOLOR="#000000">
+		<A HREF="HS_Top50.html"><IMG SRC="images/TopRacers_yellow.gif" WIDTH="106" HEIGHT="11" BORDER=0></A><A HREF="javascript:sMenu(3,33)"
+		><IMG SRC="images/yellarrow.gif" WIDTH=11 HEIGHT=11 BORDER=0></A><IMG SRC="images/blank.gif" BORDER="0" WIDTH="9" HEIGHT="11" ALT=""><BR>
+	      <FONT CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A HREF="HS_Top50.html" CLASS="aClsMenu">Top 50</A><BR>
+	      <FONT CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A HREF="https://www.hoovtech.net/HOSS/" CLASS="aClsMenu" TARGET="_blank" REL="noopener">Track Records</A><BR>
+	</TD>
+	<TD BGCOLOR="#FFCC00"><IMG SRC="images/blank.gif" WIDTH=1 HEIGHT=1></TD>
+	</TR></TABLE>
+        <IMG SRC="images/m_op_bottom.gif" WIDTH="127" HEIGHT="12"><BR>
+</DIV>
 
 
 
@@ -206,14 +211,14 @@ document.write ('</style>');
 
 <DIV ID="divAccountSetupClosed">
   <IMG SRC="images/m_cl_top_blue.gif" WIDTH=127 HEIGHT=8><BR>
-  <NOBR><A HREF="Account.html"><IMG ID="imgAccountSetup" SRC="images/AccountSetup_blue.gif" WIDTH="106" HEIGHT="11" BORDER=0></A><A HREF="javascript:sMenu(2,56)"><IMG NAME="imgAccountSetupArr" SRC="images/bluearrow.gif" WIDTH=11 HEIGHT=11 BORDER=0></A><IMG SRC="images/m_cl_right_blue.gif" WIDTH=10 HEIGHT=11></NOBR><BR>
+  <NOBR><A HREF="Account.html"><IMG ID="imgAccountSetup" SRC="images/AccountSetup_blue.gif" WIDTH="106" HEIGHT="11" BORDER=0></A><A HREF="javascript:sMenu(4,56)"><IMG NAME="imgAccountSetupArr" SRC="images/bluearrow.gif" WIDTH=11 HEIGHT=11 BORDER=0></A><IMG SRC="images/m_cl_right_blue.gif" WIDTH=10 HEIGHT=11></NOBR><BR>
   <IMG SRC="images/m_cl_bottom_blue.gif" WIDTH=127 HEIGHT=8><BR>
 </DIV>
 
 <DIV ID="divAccountSetupOpen">
         <IMG SRC="images/m_op_top.gif" WIDTH="127" HEIGHT="12"><BR>
 	<TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0><TR><TD BGCOLOR="#000000">
-		<A HREF="Account.html"><IMG SRC="images/AccountSetup_yellow.gif" WIDTH="106" HEIGHT="11" BORDER=0></A><A HREF="javascript:sMenu(3,56)"
+		<A HREF="Account.html"><IMG SRC="images/AccountSetup_yellow.gif" WIDTH="106" HEIGHT="11" BORDER=0></A><A HREF="javascript:sMenu(5,56)"
 		><IMG SRC="images/yellarrow.gif" WIDTH=11 HEIGHT=11 BORDER=0></A><IMG SRC="images/blank.gif" BORDER="0" WIDTH="9" HEIGHT="11" ALT=""><BR>
 
      	      <SPAN CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><A HREF="Account__func__cgi_eacustomer_create__do__show.html" CLASS="aClsMenu">Create Account</A><BR>
@@ -236,14 +241,14 @@ document.write ('</style>');
 
 <DIV ID="divDownloadsClosed">
   <IMG SRC="images/m_cl_top_blue.gif" WIDTH=127 HEIGHT=8><BR>
-  <NOBR><A HREF="HS_Downloads.html"><IMG ID="imgDownloads" SRC="images/Downloads_blue.gif" WIDTH="106" HEIGHT="11" BORDER=0></A><A HREF="javascript:sMenu(4,92)"><IMG NAME="imgDownloadsArr" SRC="images/bluearrow.gif" WIDTH=11 HEIGHT=11 BORDER=0></A><IMG SRC="images/m_cl_right_blue.gif" WIDTH=10 HEIGHT=11></NOBR><BR>
+  <NOBR><A HREF="HS_Downloads.html"><IMG ID="imgDownloads" SRC="images/Downloads_blue.gif" WIDTH="106" HEIGHT="11" BORDER=0></A><A HREF="javascript:sMenu(6,92)"><IMG NAME="imgDownloadsArr" SRC="images/bluearrow.gif" WIDTH=11 HEIGHT=11 BORDER=0></A><IMG SRC="images/m_cl_right_blue.gif" WIDTH=10 HEIGHT=11></NOBR><BR>
   <IMG SRC="images/m_cl_bottom_blue.gif" WIDTH=127 HEIGHT=8><BR>
 </DIV>
 
 <DIV ID="divDownloadsOpen">
         <IMG SRC="images/m_op_top.gif" WIDTH="127" HEIGHT="12"><BR>
 	<TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0><TR><TD BGCOLOR="#000000">
-		<A HREF="HS_Downloads.html"><IMG SRC="images/Downloads_yellow.gif" WIDTH="106" HEIGHT="11" BORDER=0></A><A HREF="javascript:sMenu(5,92)"
+		<A HREF="HS_Downloads.html"><IMG SRC="images/Downloads_yellow.gif" WIDTH="106" HEIGHT="11" BORDER=0></A><A HREF="javascript:sMenu(7,92)"
 		><IMG SRC="images/yellarrow.gif" WIDTH=11 HEIGHT=11 BORDER=0></A><IMG SRC="images/blank.gif" BORDER="0" WIDTH="9" HEIGHT="11" ALT=""><BR>
 
      	      <SPAN CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><A HREF="HS_Demos.html" CLASS="aClsMenu">Demos</A><BR>
@@ -269,14 +274,14 @@ document.write ('</style>');
 
 <DIV ID="divLinksClosed">
   <IMG SRC="images/m_cl_top_blue.gif" WIDTH=127 HEIGHT=8><BR>
-  <NOBR><A HREF="HS_Links.html"><IMG NAME="imgLinks" SRC="images/Links_blue.gif" WIDTH="106" HEIGHT="11" BORDER=0></A><A HREF="javascript:sMenu(6,32)"><IMG NAME="imgDownloadsArr" SRC="images/bluearrow.gif" WIDTH=11 HEIGHT=11 BORDER=0></A><IMG SRC="images/m_cl_right_blue.gif" WIDTH=10 HEIGHT=11></NOBR><BR>
+  <NOBR><A HREF="HS_Links.html"><IMG NAME="imgLinks" SRC="images/Links_blue.gif" WIDTH="106" HEIGHT="11" BORDER=0></A><A HREF="javascript:sMenu(8,32)"><IMG NAME="imgDownloadsArr" SRC="images/bluearrow.gif" WIDTH=11 HEIGHT=11 BORDER=0></A><IMG SRC="images/m_cl_right_blue.gif" WIDTH=10 HEIGHT=11></NOBR><BR>
   <IMG SRC="images/m_cl_bottom_blue.gif" WIDTH=127 HEIGHT=8><BR>
 </DIV>
 
 <DIV ID="divLinksOpen">
         <IMG SRC="images/m_op_top.gif" WIDTH="127" HEIGHT="12"><BR>
 	<TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0><TR><TD BGCOLOR="#000000">
-		<A HREF="HS_Links.html"><IMG SRC="images/Links_yellow.gif" WIDTH="106" HEIGHT="11" BORDER=0></A><A HREF="javascript:sMenu(7,32)"
+		<A HREF="HS_Links.html"><IMG SRC="images/Links_yellow.gif" WIDTH="106" HEIGHT="11" BORDER=0></A><A HREF="javascript:sMenu(9,32)"
 		><IMG SRC="images/yellarrow.gif" WIDTH=11 HEIGHT=11 BORDER=0></A><IMG SRC="images/blank.gif" BORDER="0" WIDTH="9" HEIGHT="11" ALT=""><BR>
 
      	      <SPAN CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><A HREF="HS_CarManufacturers.html" CLASS="aClsMenu">Car Manufacturers</A><BR>
@@ -311,17 +316,18 @@ document.write ('</style>');
 
 <DIV ID="divGamesClosed">
   <IMG SRC="images/m_cl_top_blue.gif" WIDTH=127 HEIGHT=8><BR>
-  <NOBR><A HREF="Games.html"><IMG NAME="Games" SRC="images/Games_blue.gif" WIDTH=106 HEIGHT=11 BORDER=0></A><A HREF="javascript:sMenu(10,43);"><IMG NAME="imgGamesArr" SRC="images/bluearrow.gif" WIDTH=11 HEIGHT=11 BORDER=0></A><IMG SRC="images/m_cl_right_blue.gif" WIDTH=10 HEIGHT=11></NOBR><BR>
+  <NOBR><A HREF="Games.html"><IMG NAME="Games" SRC="images/Games_blue.gif" WIDTH=106 HEIGHT=11 BORDER=0></A><A HREF="javascript:sMenu(12,53);"><IMG NAME="imgGamesArr" SRC="images/bluearrow.gif" WIDTH=11 HEIGHT=11 BORDER=0></A><IMG SRC="images/m_cl_right_blue.gif" WIDTH=10 HEIGHT=11></NOBR><BR>
   <IMG SRC="images/m_cl_bottom_blue.gif" WIDTH=127 HEIGHT=8><BR>
 </DIV>
 
 <DIV ID="divGamesOpen">
         <IMG SRC="images/m_op_top.gif" WIDTH="127" HEIGHT="12"><BR>
 	<TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0><TR><TD BGCOLOR="#000000">
-		<A HREF="Games.html"><IMG SRC="images/Games_Yellow.gif" WIDTH=106 HEIGHT=11 BORDER=0></A><A HREF="javascript:sMenu(11,43);"
+		<A HREF="Games.html"><IMG SRC="images/Games_Yellow.gif" WIDTH=106 HEIGHT=11 BORDER=0></A><A HREF="javascript:sMenu(13,53);"
 		><IMG SRC="images/yellarrow.gif" WIDTH=11 HEIGHT=11 BORDER=0></A><IMG SRC="images/blank.gif" BORDER="0" WIDTH="9" HEIGHT="11" ALT=""><BR>
 	      <SPAN CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><A HREF="HighStakes.html" CLASS="aClsMenu">HighStakes</A><BR>
 	      <SPAN CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><A HREF="PorscheUnleashed.html" CLASS="aClsMenu">Porsche Unleashed</A><BR>
+	      <FONT CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A HREF="MCO/main.html" CLASS="aClsMenu">Motor City</A><BR>
 	      <SPAN CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><A HREF="Home.html" CLASS="aClsMenu">EA Racing Home</A><BR>
 
 	</TD>
@@ -459,13 +465,13 @@ else if($num_cars_behind_header < 4)
 
   document.write ('<B>Download Car (Approx. 5 MB)</B><BR>')
   document.write ('<TABLE WIDTH=350 CELLPADDING=0 CELLSPACING=0 BORDER=0><TR><TD WIDTH=70 ALIGN=CENTER>')
-  document.write ('<A HREF="javascript:Legal(\'ftp://ftp.ea.com/pub/ea/demos/nfs4/nfs4_cars/bmwmc_E.exe\')"><IMG SRC="images/DL_flag_us.gif" width=37 height=24 border=0><BR></A></TD>')
-  document.write ('<TD WIDTH=70 ALIGN=CENTER><A HREF="javascript:Legal(\'ftp://ftp.ea.com/pub/ea/demos/nfs4/nfs4_cars/bmwmc_B.exe\')"><IMG SRC="images/DL_flag_uk.gif" width=37 height=24 border=0><BR></A></TD>')
-  document.write ('<TD WIDTH=70 ALIGN=CENTER><A HREF="javascript:Legal(\'ftp://ftp.ea.com/pub/ea/demos/nfs4/nfs4_cars/bmwmc_G.exe\')"><IMG SRC="images/DL_flag_ge.gif" width=37 height=24 border=0><BR></A></TD>')
-  document.write ('<TD WIDTH=70 ALIGN=CENTER><A HREF="javascript:Legal(\'ftp://ftp.ea.com/pub/ea/demos/nfs4/nfs4_cars/bmwmc_B.exe\')"><IMG SRC="images/DL_flag_sp.gif" width=37 height=24 border=0><BR></A></TD>')
-  document.write ('<TD WIDTH=70 ALIGN=CENTER><A HREF="javascript:Legal(\'ftp://ftp.ea.com/pub/ea/demos/nfs4/nfs4_cars/bmwmc_F.exe\')"><IMG SRC="images/DL_flag_fr.gif" width=37 height=24 border=0><BR></A></TD>')
-  document.write ('<TD WIDTH=70 ALIGN=CENTER><A HREF="javascript:Legal(\'ftp://ftp.ea.com/pub/ea/demos/nfs4/nfs4_cars/bmwmc_F.exe\')"><IMG SRC="images/DL_flag_it.gif" width=37 height=24 border=0><BR></A></TD>')
-  document.write ('<TD WIDTH=70 ALIGN=CENTER><A HREF="javascript:Legal(\'ftp://ftp.ea.com/pub/ea/demos/nfs4/nfs4_cars/bmwmc_E.exe\')"><IMG SRC="images/DL_flag_sw.gif" width=37 height=24 border=0><BR></A></TD>')
+  document.write ('<A HREF="javascript:Legal(\'Games.html\')"><IMG SRC="images/DL_flag_us.gif" width=37 height=24 border=0><BR></A></TD>')
+  document.write ('<TD WIDTH=70 ALIGN=CENTER><A HREF="javascript:Legal(\'Games.html\')"><IMG SRC="images/DL_flag_uk.gif" width=37 height=24 border=0><BR></A></TD>')
+  document.write ('<TD WIDTH=70 ALIGN=CENTER><A HREF="javascript:Legal(\'Games.html\')"><IMG SRC="images/DL_flag_ge.gif" width=37 height=24 border=0><BR></A></TD>')
+  document.write ('<TD WIDTH=70 ALIGN=CENTER><A HREF="javascript:Legal(\'Games.html\')"><IMG SRC="images/DL_flag_sp.gif" width=37 height=24 border=0><BR></A></TD>')
+  document.write ('<TD WIDTH=70 ALIGN=CENTER><A HREF="javascript:Legal(\'Games.html\')"><IMG SRC="images/DL_flag_fr.gif" width=37 height=24 border=0><BR></A></TD>')
+  document.write ('<TD WIDTH=70 ALIGN=CENTER><A HREF="javascript:Legal(\'Games.html\')"><IMG SRC="images/DL_flag_it.gif" width=37 height=24 border=0><BR></A></TD>')
+  document.write ('<TD WIDTH=70 ALIGN=CENTER><A HREF="javascript:Legal(\'Games.html\')"><IMG SRC="images/DL_flag_sw.gif" width=37 height=24 border=0><BR></A></TD>')
   document.write ('</TR></TABLE><BR>')
   document.write ('<BR>To install the BMW M Coupé you must first have NFS High Stakes installed on your computer.<BR>')
   document.write ('<UL><LI>Click on a flag to download the appropriate language version for the car you want to install.<BR>')

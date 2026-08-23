@@ -1,0 +1,212 @@
+[
+  {
+    "stage": "page",
+    "url": "http://www.earacing.com/HS_FanSites.phtml",
+    "local": "HS_FanSites.html",
+    "error": "<HTTPError 404: 'NOT FOUND'>"
+  },
+  {
+    "stage": "page",
+    "url": "http://www.earacing.com/Home.html",
+    "local": "home.html",
+    "error": "<HTTPError 404: 'Not Found'>"
+  },
+  {
+    "stage": "cdx-exact",
+    "url": "http://www.earacing.com/RulesOfTheRoad.phtml",
+    "kind": "page",
+    "error": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
+  },
+  {
+    "stage": "page",
+    "url": "http://www.earacing.com/RulesOfTheRoad.phtml",
+    "local": "RulesOfTheRoad.html",
+    "error": "URLError(ConnectionRefusedError(10061, 'No connection could be made because the target machine actively refused it', None, 10061, None))"
+  },
+  {
+    "stage": "page",
+    "url": "http://www.earacing.com/MotorCity.html",
+    "local": "MotorCity.html",
+    "error": "<HTTPError 404: 'NOT FOUND'>"
+  },
+  {
+    "stage": "page",
+    "url": "http://www.earacing.com/HighStakes.html",
+    "local": "HighStakes.html",
+    "error": "<HTTPError 404: 'Not Found'>"
+  },
+  {
+    "stage": "cdx-exact",
+    "url": "http://www.earacing.com/HS_AstonMartinDB7.phtml",
+    "kind": "page",
+    "error": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
+  },
+  {
+    "stage": "page",
+    "url": "http://www.earacing.com/HS_AstonMartinDB7.phtml",
+    "local": "HS_AstonMartinDB7.html",
+    "error": "URLError(ConnectionRefusedError(10061, 'No connection could be made because the target machine actively refused it', None, 10061, None))"
+  },
+  {
+    "stage": "cdx-exact",
+    "url": "http://www.earacing.com/HS_LatestPatch.phtml",
+    "kind": "page",
+    "error": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
+  },
+  {
+    "stage": "page",
+    "url": "http://www.earacing.com/HS_LatestPatch.phtml",
+    "local": "HS_LatestPatch.html",
+    "error": "URLError(ConnectionRefusedError(10061, 'No connection could be made because the target machine actively refused it', None, 10061, None))"
+  },
+  {
+    "stage": "asset",
+    "url": "http://www.earacing.com/images/aston.gif",
+    "local": "images/aston.gif",
+    "error": "<HTTPError 404: 'NOT FOUND'>"
+  },
+  {
+    "stage": "asset",
+    "url": "http://www.earacing.com/images/home_green.gif",
+    "local": "images/home_green.gif",
+    "error": "<HTTPError 404: 'NOT FOUND'>"
+  },
+  {
+    "stage": "cdx-exact",
+    "url": "http://www.earacing.com/images/home_yellow.gif",
+    "kind": "asset",
+    "error": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
+  },
+  {
+    "stage": "asset",
+    "url": "http://www.earacing.com/images/home_yellow.gif",
+    "local": "images/home_yellow.gif",
+    "error": "<HTTPError 404: 'NOT FOUND'>"
+  },
+  {
+    "stage": "asset",
+    "url": "http://www.earacing.com/images/ital.gif",
+    "local": "images/ital.gif",
+    "error": "<HTTPError 404: 'NOT FOUND'>"
+  },
+  {
+    "stage": "asset",
+    "url": "http://www.earacing.com/images/spectre.gif",
+    "local": "images/spectre.gif",
+    "error": "<HTTPError 404: 'NOT FOUND'>"
+  },
+  {
+    "stage": "asset",
+    "url": "http://www.earacing.com/nfsu.css",
+    "local": "nfsu.css",
+    "error": "<HTTPError 404: 'NOT FOUND'>"
+  },
+  {
+    "stage": "cdx-exact",
+    "url": "http://www.earacing.com/images/m_cl_bottom_grey.gif",
+    "kind": "asset",
+    "error": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
+  },
+  {
+    "stage": "asset",
+    "url": "http://www.earacing.com/images/m_cl_bottom_grey.gif",
+    "local": "images/m_cl_bottom_grey.gif",
+    "error": "URLError(ConnectionRefusedError(10061, 'No connection could be made because the target machine actively refused it', None, 10061, None))"
+  },
+  {
+    "stage": "cdx-exact",
+    "url": "http://www.earacing.com/images/topbg.gif",
+    "kind": "asset",
+    "error": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
+  },
+  {
+    "stage": "asset",
+    "url": "http://www.earacing.com/images/topbg.gif",
+    "local": "images/topbg.gif",
+    "error": "URLError(ConnectionRefusedError(10061, 'No connection could be made because the target machine actively refused it', None, 10061, None))"
+  },
+  {
+    "stage": "cdx-exact",
+    "url": "http://www.earacing.com/images/hm_NFSHSLogo.gif",
+    "kind": "asset",
+    "error": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
+  },
+  {
+    "stage": "asset",
+    "url": "http://www.earacing.com/images/hm_NFSHSLogo.gif",
+    "local": "images/hm_NFSHSLogo.gif",
+    "error": "URLError(ConnectionRefusedError(10061, 'No connection could be made because the target machine actively refused it', None, 10061, None))"
+  },
+  {
+    "stage": "cdx-exact",
+    "url": "http://www.earacing.com/images/hm_subCreateAccount.gif",
+    "kind": "asset",
+    "error": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
+  },
+  {
+    "stage": "asset",
+    "url": "http://www.earacing.com/images/hm_subCreateAccount.gif",
+    "local": "images/hm_subCreateAccount.gif",
+    "error": "URLError(ConnectionRefusedError(10061, 'No connection could be made because the target machine actively refused it', None, 10061, None))"
+  },
+  {
+    "stage": "asset",
+    "url": "http://www.earacing.com/images/hm_subForgetPassword.gif",
+    "local": "images/hm_subForgetPassword.gif",
+    "error": "URLError(ConnectionRefusedError(10061, 'No connection could be made because the target machine actively refused it', None, 10061, None))"
+  },
+  {
+    "stage": "cdx-exact",
+    "url": "http://www.earacing.com/images/bluearrow.gif",
+    "kind": "asset",
+    "error": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
+  },
+  {
+    "stage": "cdx-exact",
+    "url": "http://www.earacing.com/images/hs_cars7.jpg",
+    "kind": "asset",
+    "error": "The read operation timed out"
+  },
+  {
+    "stage": "cdx-exact",
+    "url": "http://www.earacing.com/images/Community_green.gif",
+    "kind": "asset",
+    "error": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
+  },
+  {
+    "stage": "asset",
+    "url": "http://www.earacing.com/images/Community_green.gif",
+    "local": "images/Community_green.gif",
+    "error": "URLError(ConnectionRefusedError(10061, 'No connection could be made because the target machine actively refused it', None, 10061, None))"
+  },
+  {
+    "stage": "cdx-exact",
+    "url": "http://www.earacing.com/images/DL_flag_fr.gif",
+    "kind": "asset",
+    "error": "The read operation timed out"
+  },
+  {
+    "stage": "asset",
+    "url": "http://www.earacing.com/images/DL_flag_fr.gif",
+    "local": "images/DL_flag_fr.gif",
+    "error": "URLError(ConnectionRefusedError(10061, 'No connection could be made because the target machine actively refused it', None, 10061, None))"
+  },
+  {
+    "stage": "cdx-exact",
+    "url": "http://www.earacing.com/images/cars_fmod_02.jpg",
+    "kind": "asset",
+    "error": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
+  },
+  {
+    "stage": "cdx-exact",
+    "url": "http://www.earacing.com/images/chev.gif",
+    "kind": "asset",
+    "error": "The read operation timed out"
+  },
+  {
+    "stage": "asset",
+    "url": "http://www.earacing.com/images/chev.gif",
+    "local": "images/chev.gif",
+    "error": "URLError(ConnectionRefusedError(10061, 'No connection could be made because the target machine actively refused it', None, 10061, None))"
+  }
+]

@@ -54,45 +54,31 @@ if (isIE)
 
 
 function sMenu(lyr,px) {
-// Open and close the menus
-	var lyrPair;
+	// Open and close a menu pair using standards supported by modern browsers.
+	var opening = (lyr % 2 === 0);
+	var showIndex = opening ? lyr + 1 : lyr - 1;
+	var hideIndex = lyr;
+	var highLayer = opening ? showIndex : lyr;
+	var showLayer = document.getElementById(arrMenuDIVs[showIndex]);
+	var hideLayer = document.getElementById(arrMenuDIVs[hideIndex]);
+	var delta = opening ? px : -px;
+	var i, layer, currentTop;
 
+	if (!showLayer || !hideLayer) return false;
 
-	if (lyr == 0 || lyr == 2 || lyr == 4 || lyr == 6 || lyr == 8 || lyr == 10)
-		{
-		lyrPair = lyr++;
-		arith = '+';
-		highLayer = lyr;
-		}
-	else
-		{
-		lyrPair = lyr--;
-		arith = '-';
-		highLayer = lyrPair;
-		}
+	showLayer.style.visibility = "visible";
+	hideLayer.style.visibility = "hidden";
 
-	if (isNS)
-		{
-		eval('document.layers["'+arrMenuDIVs[lyr]+'"].visibility = "show"');
-		eval('document.layers["'+arrMenuDIVs[lyrPair]+'"].visibility = "hide"');
+	for (i = highLayer + 1; i < arrMenuDIVs.length; i++) {
+		layer = document.getElementById(arrMenuDIVs[i]);
+		if (!layer) continue;
+		currentTop = parseFloat(window.getComputedStyle(layer).top);
+		if (isNaN(currentTop)) currentTop = layer.offsetTop;
+		layer.style.top = (currentTop + delta) + "px";
+	}
 
-		for ( i = (highLayer + 1); i < (arrMenuDIVs.length); i++ )
-			{
-			eval('document.layers["'+arrMenuDIVs[i]+'"].pageY = document.layers["'+arrMenuDIVs[i]+'"].pageY'+arith+'px');
-			}
-		}
-	else
-		{
-		eval('document.all.'+arrMenuDIVs[lyr]+'.style.visibility = "visible"');
-		eval('document.all.'+arrMenuDIVs[lyrPair]+'.style.visibility = "hidden"');
-
-		for ( i = (highLayer + 1); i < (arrMenuDIVs.length); i++ )
-			{
-			eval('document.all.'+arrMenuDIVs[i]+'.style.posTop = document.all.'+arrMenuDIVs[i]+'.style.posTop'+arith+'px');
-			}
-		}
+	return false;
 }
-
 
 
 
@@ -116,14 +102,14 @@ A:hover			{ color:#FFCC00;}
 .Normal		{ font-family:Verdana,Arial,Helvetica; color:#FFFFFF; font-size:12px; }
 .Title		{ font-family:Verdana,Arial,Helvetica; color:#FFFFFF; font-size:12px; font-weight:bold; }
 
-#divOnlineRacingClosed	{ position:absolute; top:130; left:12; width:127; z-index:40; }
-#divTopRacersClosed	{ position:absolute; top:170; left:12; width:127; z-index:40; }
-#divAccountSetupClosed	{ position:absolute; top:210; left:12; width:127; z-index:40; }
-#divDownloadsClosed	{ position:absolute; top:250; left:12; width:127; z-index:40; }
-#divFeedbackClosed	{ position:absolute; top:290; left:12; width:127; z-index:40; }
-#divGamesClosed		{ position:absolute; top:330; left:12; width:127; z-index:40; }
+#divOnlineRacingClosed	{ position:absolute; top:130px; left:12px; width:127px; z-index:40; }
+#divTopRacersClosed	{ position:absolute; top:170px; left:12px; width:127px; z-index:40; }
+#divAccountSetupClosed	{ position:absolute; top:210px; left:12px; width:127px; z-index:40; }
+#divDownloadsClosed	{ position:absolute; top:250px; left:12px; width:127px; z-index:40; }
+#divFeedbackClosed	{ position:absolute; top:290px; left:12px; width:127px; z-index:40; }
+#divGamesClosed		{ position:absolute; top:330px; left:12px; width:127px; z-index:40; }
 
-#divLogos		{ position:absolute;top:390;left:12;width:127;z-index:40; }
+#divLogos		{ position:absolute;top:390px;left:12px;width:127px;z-index:40; }
 </style>
 
 <script language="javascript">
@@ -132,7 +118,7 @@ var sHid = "hidden";
 var nPx = 9;
 var nPxB = 8;
 
-if (isNS) {sHid = "hide";nPx = 10;nPxB = 9;};
+if (document.layers) {sHid = "hide";nPx = 10;nPxB = 9;};
 
 document.write ('<style type="text/css">');
 
@@ -141,12 +127,12 @@ document.write ('a.aClsMenu:hover	{ color:#FFFF99;}')
 document.write ('a.aClsSubMenu		{ font-family:Verdana,Arial,Helvetica;color:#FFFF00;font-size:'+nPxB+'px;line-height:12px;text-decoration:none;}')
 document.write ('a.aClsSubMenu:hover	{ color:#FFFF99;}')
 
-document.write ('#divOnlineRacingOpen	{ position:absolute; top:130; left:12; width:127; z-index:42;visibility:'+sHid+';}')
-document.write ('#divTopRacersOpen	{ position:absolute; top:170; left:12; width:127; z-index:42;visibility:'+sHid+';}')
-document.write ('#divAccountSetupOpen	{ position:absolute; top:210; left:12; width:127; z-index:42;visibility:'+sHid+';}')
-document.write ('#divDownloadsOpen	{ position:absolute; top:250; left:12; width:127; z-index:42;visibility:'+sHid+';}')
-document.write ('#divFeedbackOpen	{ position:absolute; top:290; left:12; width:127; z-index:42;visibility:'+sHid+';}')
-document.write ('#divGamesOpen		{ position:absolute; top:330; left:12; width:127; z-index:42;visibility:'+sHid+';}')
+document.write ('#divOnlineRacingOpen	{ position:absolute; top:130px; left:12px; width:127px; z-index:42;visibility:'+sHid+';}')
+document.write ('#divTopRacersOpen	{ position:absolute; top:170px; left:12px; width:127px; z-index:42;visibility:'+sHid+';}')
+document.write ('#divAccountSetupOpen	{ position:absolute; top:210px; left:12px; width:127px; z-index:42;visibility:'+sHid+';}')
+document.write ('#divDownloadsOpen	{ position:absolute; top:250px; left:12px; width:127px; z-index:42;visibility:'+sHid+';}')
+document.write ('#divFeedbackOpen	{ position:absolute; top:290px; left:12px; width:127px; z-index:42;visibility:'+sHid+';}')
+document.write ('#divGamesOpen		{ position:absolute; top:330px; left:12px; width:127px; z-index:42;visibility:'+sHid+';}')
 
 document.write ('</style>');
 </script>
@@ -275,17 +261,18 @@ document.write ('</style>');
 
 <DIV ID="divGamesClosed">
   <IMG SRC="images/m_cl_top_green.gif" WIDTH=127 HEIGHT=8><BR>
-  <NOBR><A HREF="Games.html"><IMG NAME="Games" SRC="images/Games_green.gif" WIDTH=106 HEIGHT=11 BORDER=0></A><A HREF="javascript:sMenu(10,33);"><IMG NAME="imgGamesArr" SRC="images/greenarrow.gif" WIDTH=11 HEIGHT=11 BORDER=0></A><IMG SRC="images/m_cl_right_green.gif" WIDTH=10 HEIGHT=11></NOBR><BR>
+  <NOBR><A HREF="Games.html"><IMG NAME="Games" SRC="images/Games_green.gif" WIDTH=106 HEIGHT=11 BORDER=0></A><A HREF="javascript:sMenu(10,53);"><IMG NAME="imgGamesArr" SRC="images/greenarrow.gif" WIDTH=11 HEIGHT=11 BORDER=0></A><IMG SRC="images/m_cl_right_green.gif" WIDTH=10 HEIGHT=11></NOBR><BR>
   <IMG SRC="images/m_cl_bottom_green.gif" WIDTH=127 HEIGHT=8><BR>
 </DIV>
 
 <DIV ID="divGamesOpen">
         <IMG SRC="images/m_op_top.gif" WIDTH="127" HEIGHT="12"><BR>
 	<TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0><TR><TD BGCOLOR="#000000">
-		<A HREF="Games.html"><IMG SRC="images/Games_Yellow.gif" WIDTH=106 HEIGHT=11 BORDER=0></A><A HREF="javascript:sMenu(11,33);"
+		<A HREF="Games.html"><IMG SRC="images/Games_Yellow.gif" WIDTH=106 HEIGHT=11 BORDER=0></A><A HREF="javascript:sMenu(11,53);"
 		><IMG SRC="images/yellarrow.gif" WIDTH=11 HEIGHT=11 BORDER=0></A><IMG SRC="images/blank.gif" BORDER="0" WIDTH="9" HEIGHT="11" ALT=""><BR>
 	      <FONT CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A HREF="HighStakes.html" CLASS="aClsMenu">HighStakes</A><BR>
 	      <FONT CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A HREF="PorscheUnleashed.html" CLASS="aClsMenu">Porsche Unleashed</A><BR>
+	      <FONT CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A HREF="MCO/main.html" CLASS="aClsMenu">Motor City</A><BR>
 	      <FONT CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A HREF="Home.html" CLASS="aClsMenu">EA Racing Home</A><BR>
 	</TD>
 	<TD BGCOLOR="#FFCC00"><IMG SRC="images/blank.gif" WIDTH=1 HEIGHT=1></TD>
@@ -390,7 +377,7 @@ track and one car.
  	<BR><BR>
         <SPAN CLASS="Title">More NFS: Porsche Unleashed Downloads</span><br>
 Additional cars and other downloadable assets for Porsche Unleashed can be
-found at <a href="Games.html">ftp://ftp.ea.com/pub/ea/demos/nfspu/</a>
+found at <a href="Games.html">Games.html</a>
 
 	</SPAN>
 

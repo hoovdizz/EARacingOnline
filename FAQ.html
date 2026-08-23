@@ -53,45 +53,31 @@ if (isIE)
 
 
 function sMenu(lyr,px) {
-// Open and close the menus
-	var lyrPair;
-	
-	
-	if (lyr == 0 || lyr == 2 || lyr == 4 || lyr == 6 || lyr == 8)
-		{
-		lyrPair = lyr++;
-		arith = '+';
-		highLayer = lyr;
-		}
-	else
-		{
-		lyrPair = lyr--;
-		arith = '-';
-		highLayer = lyrPair;
-		}
-	
-	if (isNS)
-		{
-		eval('document.layers["'+arrMenuDIVs[lyr]+'"].visibility = "show"');
-		eval('document.layers["'+arrMenuDIVs[lyrPair]+'"].visibility = "hide"');
-		
-		for ( i = (highLayer + 1); i < (arrMenuDIVs.length); i++ )
-			{
-			eval('document.layers["'+arrMenuDIVs[i]+'"].pageY = document.layers["'+arrMenuDIVs[i]+'"].pageY'+arith+'px');
-			}
-		}
-	else
-		{
-		eval('document.all.'+arrMenuDIVs[lyr]+'.style.visibility = "visible"');
-		eval('document.all.'+arrMenuDIVs[lyrPair]+'.style.visibility = "hidden"');
-	
-		for ( i = (highLayer + 1); i < (arrMenuDIVs.length); i++ )
-			{
-			eval('document.all.'+arrMenuDIVs[i]+'.style.posTop = document.all.'+arrMenuDIVs[i]+'.style.posTop'+arith+'px');
-			}
-		}
-}
+	// Open and close a menu pair using standards supported by modern browsers.
+	var opening = (lyr % 2 === 0);
+	var showIndex = opening ? lyr + 1 : lyr - 1;
+	var hideIndex = lyr;
+	var highLayer = opening ? showIndex : lyr;
+	var showLayer = document.getElementById(arrMenuDIVs[showIndex]);
+	var hideLayer = document.getElementById(arrMenuDIVs[hideIndex]);
+	var delta = opening ? px : -px;
+	var i, layer, currentTop;
 
+	if (!showLayer || !hideLayer) return false;
+
+	showLayer.style.visibility = "visible";
+	hideLayer.style.visibility = "hidden";
+
+	for (i = highLayer + 1; i < arrMenuDIVs.length; i++) {
+		layer = document.getElementById(arrMenuDIVs[i]);
+		if (!layer) continue;
+		currentTop = parseFloat(window.getComputedStyle(layer).top);
+		if (isNaN(currentTop)) currentTop = layer.offsetTop;
+		layer.style.top = (currentTop + delta) + "px";
+	}
+
+	return false;
+}
 
 
 
@@ -119,13 +105,13 @@ A:hover			{ color:#FFFF99;}
 .important	{ font-family:Verdana,Arial,Helvetica; color:#FFFFFF; font-size:14px; font-weight:bold; }
 .reallybig	{ font-family:Verdana,Arial,Helvetica; color:#FFFFFF; font-size:16px; font-weight:bold; }
 
-#divHomeClosed		{ position:absolute; top:130; left:12; width:127; z-index:40; }
-#divAccountSetupClosed	{ position:absolute; top:170; left:12; width:127; z-index:40; }
-#divRulesClosed		{ position:absolute; top:210; left:12; width:127; z-index:40; }
-#divFeedbackClosed	{ position:absolute; top:250; left:12; width:127; z-index:40; }
-#divGamesClosed		{ position:absolute; top:290; left:12; width:127; z-index:40; }
+#divHomeClosed		{ position:absolute; top:130px; left:12px; width:127px; z-index:40; }
+#divAccountSetupClosed	{ position:absolute; top:170px; left:12px; width:127px; z-index:40; }
+#divRulesClosed		{ position:absolute; top:210px; left:12px; width:127px; z-index:40; }
+#divFeedbackClosed	{ position:absolute; top:250px; left:12px; width:127px; z-index:40; }
+#divGamesClosed		{ position:absolute; top:290px; left:12px; width:127px; z-index:40; }
 
-#divLogos		{ position:absolute;top:350;left:12;width:127;z-index:40; }
+#divLogos		{ position:absolute;top:350px;left:12px;width:127px;z-index:40; }
 </style>
 
 <script language="javascript">
@@ -134,7 +120,7 @@ var sHid = "hidden";
 var nPx = 9;
 var nPxB = 8;
 
-if (isNS) {sHid = "hide";nPx = 10;nPxB = 9;};
+if (document.layers) {sHid = "hide";nPx = 10;nPxB = 9;};
 
 document.write ('<style type="text/css">');
 
@@ -143,11 +129,11 @@ document.write ('a.aClsMenu:hover	{ color:#FFFF99;}')
 document.write ('a.aClsSubMenu		{ font-family:Verdana,Arial,Helvetica;color:#FFFF00;font-size:'+nPxB+'px;line-height:12px;text-decoration:none;}')
 document.write ('a.aClsSubMenu:hover	{ color:#FFFF99;}')
 
-document.write ('#divHomeOpen		{ position:absolute; top:130; left:12; width:127; z-index:42;visibility:'+sHid+';}')
-document.write ('#divAccountSetupOpen	{ position:absolute; top:170; left:12; width:127; z-index:42;visibility:'+sHid+';}')
-document.write ('#divRulesOpen		{ position:absolute; top:210; left:12; width:127; z-index:42;visibility:'+sHid+';}')
-document.write ('#divFeedbackOpen	{ position:absolute; top:250; left:12; width:127; z-index:42;visibility:'+sHid+';}')
-document.write ('#divGamesOpen		{ position:absolute; top:290; left:12; width:127; z-index:42;visibility:'+sHid+';}')
+document.write ('#divHomeOpen		{ position:absolute; top:130px; left:12px; width:127px; z-index:42;visibility:'+sHid+';}')
+document.write ('#divAccountSetupOpen	{ position:absolute; top:170px; left:12px; width:127px; z-index:42;visibility:'+sHid+';}')
+document.write ('#divRulesOpen		{ position:absolute; top:210px; left:12px; width:127px; z-index:42;visibility:'+sHid+';}')
+document.write ('#divFeedbackOpen	{ position:absolute; top:250px; left:12px; width:127px; z-index:42;visibility:'+sHid+';}')
+document.write ('#divGamesOpen		{ position:absolute; top:290px; left:12px; width:127px; z-index:42;visibility:'+sHid+';}')
 
 document.write ('</style>');
 </script>
@@ -248,18 +234,18 @@ document.write ('</style>');
 
 <DIV ID="divGamesClosed">
   <IMG SRC="images/m_cl_top_grey.gif" WIDTH=127 HEIGHT=8><BR>
-  <NOBR><A HREF="Games.html"><IMG NAME="Games" SRC="images/Games_Grey.gif" WIDTH=106 HEIGHT=11 BORDER=0></A><A HREF="javascript:sMenu(8,33);"><IMG NAME="imgGamesArr" SRC="images/greyarrow.gif" WIDTH=11 HEIGHT=11 BORDER=0></A><IMG SRC="images/m_cl_right_grey.gif" WIDTH=10 HEIGHT=11></NOBR><BR>
+  <NOBR><A HREF="Games.html"><IMG NAME="Games" SRC="images/Games_Grey.gif" WIDTH=106 HEIGHT=11 BORDER=0></A><A HREF="javascript:sMenu(8,43);"><IMG NAME="imgGamesArr" SRC="images/greyarrow.gif" WIDTH=11 HEIGHT=11 BORDER=0></A><IMG SRC="images/m_cl_right_grey.gif" WIDTH=10 HEIGHT=11></NOBR><BR>
   <IMG SRC="images/m_cl_bottom_grey.gif" WIDTH=127 HEIGHT=8><BR>
 </DIV>
 
 <DIV ID="divGamesOpen">
         <IMG SRC="images/m_op_top.gif" WIDTH="127" HEIGHT="12"><BR>
 	<TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0><TR><TD BGCOLOR="#000000">
-		<A HREF="Games.html"><IMG SRC="images/Games_Yellow.gif" WIDTH=106 HEIGHT=11 BORDER=0></A><A HREF="javascript:sMenu(9,33);"
+		<A HREF="Games.html"><IMG SRC="images/Games_Yellow.gif" WIDTH=106 HEIGHT=11 BORDER=0></A><A HREF="javascript:sMenu(9,43);"
 		><IMG SRC="images/yellarrow.gif" WIDTH=11 HEIGHT=11 BORDER=0></A><IMG SRC="images/blank.gif" BORDER="0" WIDTH="9" HEIGHT="11" ALT=""><BR>
 	      <FONT CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A HREF="HighStakes.html" CLASS="aClsMenu">High Stakes</A><BR>
 	      <FONT CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A HREF="PorscheUnleashed.html" CLASS="aClsMenu">Porsche Unleashed</A><BR>
-	      <!--FONT CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A HREF="MotorCity.html" CLASS="aClsMenu">Motor City</A><BR-->
+	      <FONT CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A HREF="MCO/main.html" CLASS="aClsMenu">Motor City</A><BR>
 	</TD>
 	<TD BGCOLOR="#FFCC00"><IMG SRC="images/blank.gif" WIDTH=1 HEIGHT=1></TD>
 	</TR></TABLE>
@@ -376,13 +362,13 @@ This could be because the servers are down, you aren't connected to the
 Internet, you have a bad install, or you don't have a route to the servers.
 <BR><BR>
 If this error appears after the persona selection screen, then the servers
-are probably down.  Please send email to earacing@ea.com and let us know.
+are probably down.  Please send email to the site administrator and let us know.
 <BR><BR>
 If it appears when you enter your user name and password, then you probably
 can't locate the machines.  To verify this, bring up a DOS prompt and enter
 the command 'ping login.earacing.com'.  If you get a reply, then the
 servers are up and something else is the problem.  Again, send mail to
-earacing@ea.com and let us know your exact configuration so we can try to
+the site administrator and let us know your exact configuration so we can try to
 help you.  If you don't get a response, contact your ISP and ask them to
 try and help you figure out why you can't see the machines.
 
@@ -398,7 +384,7 @@ reappear.
 <SPAN CLASS="Title">Q:  I never received email confirmations for my racing user names.  It's
 been ## days/weeks/months since I registered my account!  When should I
 expect them?</SPAN><br>
-A:  They should have come right away.  Please send mail to earacing@ea.com,
+A:  They should have come right away.  Please send mail to the site administrator,
 giving the user name you entered, and we'll send you your password again.
 
 <BR><BR>
@@ -406,7 +392,7 @@ giving the user name you entered, and we'll send you your password again.
 Error.</SPAN><br>
 A:  This is caused by an abort in the program that creates the account.
 Your account may or may not have been created.  If this happens, please
-send mail to earacing@ea.com giving the name you were attempting to create
+send mail to the site administrator giving the name you were attempting to create
 and we'll let you know if the account was created.
 
 <BR><BR>
@@ -424,7 +410,7 @@ name/password are invalid. </SPAN><br>
 A:  User names and passwords are case sensitive.  This means that the name
 John is different than the names JOHN, john, and JohN.  Check your spelling
 and case and try again.  Is the caps lock light on?  If you're still having
-trouble, please send mail to earacing@ea.com giving the name you were
+trouble, please send mail to the site administrator giving the name you were
 attempting to use and we'll let you know if it's correct. 
 	<BR><BR>
 
