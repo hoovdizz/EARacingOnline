@@ -54,7 +54,6 @@ if (isIE)
 
 
 function sMenu(lyr,px) {
-	// Open and close a menu pair using standards supported by modern browsers.
 	var opening = (lyr % 2 === 0);
 	var showIndex = opening ? lyr + 1 : lyr - 1;
 	var hideIndex = lyr;
@@ -63,12 +62,9 @@ function sMenu(lyr,px) {
 	var hideLayer = document.getElementById(arrMenuDIVs[hideIndex]);
 	var delta = opening ? px : -px;
 	var i, layer, currentTop;
-
 	if (!showLayer || !hideLayer) return false;
-
 	showLayer.style.visibility = "visible";
 	hideLayer.style.visibility = "hidden";
-
 	for (i = highLayer + 1; i < arrMenuDIVs.length; i++) {
 		layer = document.getElementById(arrMenuDIVs[i]);
 		if (!layer) continue;
@@ -76,7 +72,6 @@ function sMenu(lyr,px) {
 		if (isNaN(currentTop)) currentTop = layer.offsetTop;
 		layer.style.top = (currentTop + delta) + "px";
 	}
-
 	return false;
 }
 
@@ -171,20 +166,20 @@ document.write ('</style>');
 
 <DIV ID="divAccountSetupClosed">
   <IMG SRC="images/m_cl_top_grey.gif" WIDTH=127 HEIGHT=8><BR>
-  <NOBR><A HREF="Account.html"><IMG ID="imgAccountSetup" SRC="images/AccountSetup_grey.gif" WIDTH="106" HEIGHT="11" BORDER=0></A><A HREF="javascript:sMenu(2,56)"><IMG NAME="imgAccountSetupArr" SRC="images/greyarrow.gif" WIDTH=11 HEIGHT=11 BORDER=0></A><IMG SRC="images/m_cl_right_grey.gif" WIDTH=10 HEIGHT=11></NOBR><BR>
+  <NOBR><A HREF="Account/Account.html"><IMG ID="imgAccountSetup" SRC="images/AccountSetup_grey.gif" WIDTH="106" HEIGHT="11" BORDER=0></A><A HREF="javascript:sMenu(2,56)"><IMG NAME="imgAccountSetupArr" SRC="images/greyarrow.gif" WIDTH=11 HEIGHT=11 BORDER=0></A><IMG SRC="images/m_cl_right_grey.gif" WIDTH=10 HEIGHT=11></NOBR><BR>
   <IMG SRC="images/m_cl_bottom_grey.gif" WIDTH=127 HEIGHT=8><BR>
 </DIV>
 
 <DIV ID="divAccountSetupOpen">
         <IMG SRC="images/m_op_top.gif" WIDTH="127" HEIGHT="12"><BR>
 	<TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0><TR><TD BGCOLOR="#000000">
-		<A HREF="Account.html"><IMG SRC="images/AccountSetup_yellow.gif" WIDTH="106" HEIGHT="11" BORDER=0></A><A HREF="javascript:sMenu(3,56)"
+		<A HREF="Account/Account.html"><IMG SRC="images/AccountSetup_yellow.gif" WIDTH="106" HEIGHT="11" BORDER=0></A><A HREF="javascript:sMenu(3,56)"
 		><IMG SRC="images/yellarrow.gif" WIDTH=11 HEIGHT=11 BORDER=0></A><IMG SRC="images/blank.gif" BORDER="0" WIDTH="9" HEIGHT="11" ALT=""><BR>
 
-     	      <FONT CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A HREF="Account__func__cgi_eacustomer_create__do__show.html" CLASS="aClsMenu">Create Account</A><BR>
-     	      <FONT CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A HREF="Account__func__cgi_eacustomer_add_game__do__show.html" CLASS="aClsMenu">Add Game</A><BR>
-     	      <FONT CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A HREF="Account__func__cgi_eacustomer_edit__do__show.html" CLASS="aClsMenu">Edit Account</A><BR>
-	      <FONT CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A HREF="Account__func__cgi_eacustomer_forgot_password__do__show.html" CLASS="aClsMenu">Forget Password?</A><BR>
+     	      <FONT CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A HREF="Account/Account__func__cgi_eacustomer_create__do__show.html" CLASS="aClsMenu">Create Account</A><BR>
+     	      <FONT CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A HREF="Account/Account__func__cgi_eacustomer_add_game__do__show.html" CLASS="aClsMenu">Add Game</A><BR>
+     	      <FONT CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A HREF="Account/Account__func__cgi_eacustomer_edit__do__show.html" CLASS="aClsMenu">Edit Account</A><BR>
+	      <FONT CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A HREF="Account/Account__func__cgi_eacustomer_forgot_password__do__show.html" CLASS="aClsMenu">Forget Password?</A><BR>
 
 	</TD>
 	<TD BGCOLOR="#FFCC00"><IMG SRC="images/blank.gif" WIDTH=1 HEIGHT=1></TD>
@@ -244,8 +239,8 @@ document.write ('</style>');
 	<TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0><TR><TD BGCOLOR="#000000">
 		<A HREF="Games.html"><IMG SRC="images/Games_Yellow.gif" WIDTH=106 HEIGHT=11 BORDER=0></A><A HREF="javascript:sMenu(9,43);"
 		><IMG SRC="images/yellarrow.gif" WIDTH=11 HEIGHT=11 BORDER=0></A><IMG SRC="images/blank.gif" BORDER="0" WIDTH="9" HEIGHT="11" ALT=""><BR>
-	      <FONT CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A HREF="HighStakes.html" CLASS="aClsMenu">High Stakes</A><BR>
-	      <FONT CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A HREF="PorscheUnleashed.html" CLASS="aClsMenu">Porsche Unleashed</A><BR>
+	      <FONT CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A HREF="HS/HighStakes.html" CLASS="aClsMenu">High Stakes</A><BR>
+	      <FONT CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A HREF="PU/PorscheUnleashed.html" CLASS="aClsMenu">Porsche Unleashed</A><BR>
 	      <FONT CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A HREF="MCO/main.html" CLASS="aClsMenu">Motor City</A><BR>
 	</TD>
 	<TD BGCOLOR="#FFCC00"><IMG SRC="images/blank.gif" WIDTH=1 HEIGHT=1></TD>
@@ -322,7 +317,7 @@ document.write ('</style>');
 	<SPAN CLASS="Normal">
 	If you're looking for online racing action, you've come to the right place. EA Racing provides online racing support for the following games:<BR><BR>
 	
-	<SPAN CLASS="Title"><A HREF="HighStakes.html">Need for Speed: High Stakes</A></SPAN><BR>
+	<SPAN CLASS="Title"><A HREF="HS/HighStakes.html">Need for Speed: High Stakes</A></SPAN><BR>
 	High Stakes racing is about knowing your limits and exceeding them-whatever the cost. NFS: High Stakes features the latest generation of stunning special effects with incredible car detail, career play, variable time of day and weather conditions, multi-player network racing, and all new Hot Pursuit modes.
 	<BR><BR>
 	<SPAN CLASS="Normal">Online Play supports the following modes:
@@ -333,7 +328,7 @@ document.write ('</style>');
 	
 	<BR><BR>
 
-	<SPAN CLASS="Title"><A HREF="PorscheUnleashed.html">Need for Speed: Porsche Unleashed</A></SPAN><BR>
+	<SPAN CLASS="Title"><A HREF="PU/PorscheUnleashed.html">Need for Speed: Porsche Unleashed</A></SPAN><BR>
 	The latest in  the award-winning Need For Speed series features  mind-numbing open road racing experiences with an extensive collection of cars from the 50-year history Porsche,  the most storied performance car manufacturer in the world. Push every boundary to unleash the potential of these incredible vehicles while weaving through traffic, against fierce competition, and escaping the police to ultimately discover your own limits. 
 	</SPAN>
 	<BR><BR>

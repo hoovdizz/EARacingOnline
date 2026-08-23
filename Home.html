@@ -54,7 +54,6 @@ if (isIE)
 
 
 function sMenu(lyr,px) {
-	// Open and close a menu pair using standards supported by modern browsers.
 	var opening = (lyr % 2 === 0);
 	var showIndex = opening ? lyr + 1 : lyr - 1;
 	var hideIndex = lyr;
@@ -63,11 +62,9 @@ function sMenu(lyr,px) {
 	var hideLayer = document.getElementById(arrMenuDIVs[hideIndex]);
 	var delta = opening ? px : -px;
 	var i, layer, currentTop;
-
 	if (!showLayer || !hideLayer) return false;
 	showLayer.style.visibility = "visible";
 	hideLayer.style.visibility = "hidden";
-
 	for (i = highLayer + 1; i < arrMenuDIVs.length; i++) {
 		layer = document.getElementById(arrMenuDIVs[i]);
 		if (!layer) continue;
@@ -169,20 +166,20 @@ document.write ('</style>');
 
 <DIV ID="divAccountSetupClosed">
   <IMG SRC="images/m_cl_top_grey.gif" WIDTH=127 HEIGHT=8><BR>
-  <NOBR><A HREF="Account.html"><IMG ID="imgAccountSetup" SRC="images/AccountSetup_grey.gif" WIDTH="106" HEIGHT="11" BORDER=0></A><A HREF="javascript:sMenu(2,56)"><IMG NAME="imgAccountSetupArr" SRC="images/greyarrow.gif" WIDTH=11 HEIGHT=11 BORDER=0></A><IMG SRC="images/m_cl_right_grey.gif" WIDTH=10 HEIGHT=11></NOBR><BR>
+  <NOBR><A HREF="Account/Account.html"><IMG ID="imgAccountSetup" SRC="images/AccountSetup_grey.gif" WIDTH="106" HEIGHT="11" BORDER=0></A><A HREF="javascript:sMenu(2,56)"><IMG NAME="imgAccountSetupArr" SRC="images/greyarrow.gif" WIDTH=11 HEIGHT=11 BORDER=0></A><IMG SRC="images/m_cl_right_grey.gif" WIDTH=10 HEIGHT=11></NOBR><BR>
   <IMG SRC="images/m_cl_bottom_grey.gif" WIDTH=127 HEIGHT=8><BR>
 </DIV>
 
 <DIV ID="divAccountSetupOpen">
         <IMG SRC="images/m_op_top.gif" WIDTH="127" HEIGHT="12"><BR>
 	<TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0><TR><TD BGCOLOR="#000000">
-		<A HREF="Account.html"><IMG SRC="images/AccountSetup_yellow.gif" WIDTH="106" HEIGHT="11" BORDER=0></A><A HREF="javascript:sMenu(3,56)"
+		<A HREF="Account/Account.html"><IMG SRC="images/AccountSetup_yellow.gif" WIDTH="106" HEIGHT="11" BORDER=0></A><A HREF="javascript:sMenu(3,56)"
 		><IMG SRC="images/yellarrow.gif" WIDTH=11 HEIGHT=11 BORDER=0></A><IMG SRC="images/blank.gif" BORDER="0" WIDTH="9" HEIGHT="11" ALT=""><BR>
 
-     	      <FONT CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A HREF="Account__func__cgi_eacustomer_create__do__show.html" CLASS="aClsMenu">Create Account</A><BR>
-     	      <FONT CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A HREF="Account__func__cgi_eacustomer_add_game__do__show.html" CLASS="aClsMenu">Add Game</A><BR>
-     	      <FONT CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A HREF="Account__func__cgi_eacustomer_edit__do__show.html" CLASS="aClsMenu">Edit Account</A><BR>
-	      <FONT CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A HREF="Account__func__cgi_eacustomer_forgot_password__do__show.html" CLASS="aClsMenu">Forget Password?</A><BR>
+     	      <FONT CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A HREF="Account/Account__func__cgi_eacustomer_create__do__show.html" CLASS="aClsMenu">Create Account</A><BR>
+     	      <FONT CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A HREF="Account/Account__func__cgi_eacustomer_add_game__do__show.html" CLASS="aClsMenu">Add Game</A><BR>
+     	      <FONT CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A HREF="Account/Account__func__cgi_eacustomer_edit__do__show.html" CLASS="aClsMenu">Edit Account</A><BR>
+	      <FONT CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A HREF="Account/Account__func__cgi_eacustomer_forgot_password__do__show.html" CLASS="aClsMenu">Forget Password?</A><BR>
 
 	</TD>
 	<TD BGCOLOR="#FFCC00"><IMG SRC="images/blank.gif" WIDTH=1 HEIGHT=1></TD>
@@ -242,8 +239,8 @@ document.write ('</style>');
 	<TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0><TR><TD BGCOLOR="#000000">
 		<A HREF="Games.html"><IMG SRC="images/Games_Yellow.gif" WIDTH=106 HEIGHT=11 BORDER=0></A><A HREF="javascript:sMenu(9,43);"
 		><IMG SRC="images/yellarrow.gif" WIDTH=11 HEIGHT=11 BORDER=0></A><IMG SRC="images/blank.gif" BORDER="0" WIDTH="9" HEIGHT="11" ALT=""><BR>
-	      <FONT CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A HREF="HighStakes.html" CLASS="aClsMenu">High Stakes</A><BR>
-	      <FONT CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A HREF="PorscheUnleashed.html" CLASS="aClsMenu">Porsche Unleashed</A><BR>
+	      <FONT CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A HREF="HS/HighStakes.html" CLASS="aClsMenu">High Stakes</A><BR>
+	      <FONT CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A HREF="PU/PorscheUnleashed.html" CLASS="aClsMenu">Porsche Unleashed</A><BR>
 	      <FONT CLASS="Tiny">&nbsp;&nbsp;&nbsp;&nbsp;</FONT><A HREF="MCO/main.html" CLASS="aClsMenu">Motor City</A><BR>
 	</TD>
 	<TD BGCOLOR="#FFCC00"><IMG SRC="images/blank.gif" WIDTH=1 HEIGHT=1></TD>
@@ -340,7 +337,7 @@ holiday, we determined that there is still a large community that visits our ser
 been aborted while we evaluate alternatives. <br>
  <br>
 We will continue to monitor the High Stakes and Porsche Unleashed products and also move forward with the development of our
-exciting, new persistent world racing game, <a href=MCO/main.html>Motor City Online</a>. <br>
+exciting, new persistent world racing game, <a href="MCO/main.html">Motor City Online</a>. <br>
  <br>
 Thank you for your valuable feedback.  We'll see you on the racing circuits!<br>
 <br>
@@ -355,7 +352,7 @@ EA Racing Staff<br>
     <P>
     <b>The High Stakes 4.50 Patch is here!</b>&nbsp; This patch was designed
     specifically to work with the new EA Racing host and its integration with
-    NPS2.&nbsp; Please consult the <a href="HS_UpcomingPatch.html">key issues</a>
+    NPS2.&nbsp; Please consult the <a href="HS/HS_UpcomingPatch.html">key issues</a>
     that the 4.50 patch addresses.&nbsp; Download the <a href="patch/NFSHSpatch4_50.exe">patch
     here</a>!</p>
     <p>
@@ -393,7 +390,7 @@ Beta process and is now currently in <b>public</b> Beta test.
 	<BR><BR>
 	To participate in online racing you must have an EA Racing account.  
 	Become a member now for FREE by following this link
-	<A HREF="Account.html">Account Setup</A>.
+	<A HREF="Account/Account.html">Account Setup</A>.
 	<BR><BR>
 	Your EA Racing account includes:
 	<UL>
@@ -412,8 +409,8 @@ Beta process and is now currently in <b>public</b> Beta test.
 	
 	<TABLE WIDTH="100%" BORDER="0" CELLPADDING="1" CELLSPACING="0">
 	<TR>
-	<TD ALIGN="CENTER"><A HREF="HighStakes.html"><IMG SRC="images/hm_NFSHSLogo.gif" BORDER="0" WIDTH="224" HEIGHT="89" ALT=""></A></TD>
-	<TD ALIGN="CENTER"><A HREF="PorscheUnleashed.html"><IMG SRC="images/hm_NFSPULogo.gif" BORDER="0" WIDTH="209" HEIGHT="97" ALT=""></A></TD>
+	<TD ALIGN="CENTER"><A HREF="HS/HighStakes.html"><IMG SRC="images/hm_NFSHSLogo.gif" BORDER="0" WIDTH="224" HEIGHT="89" ALT=""></A></TD>
+	<TD ALIGN="CENTER"><A HREF="PU/PorscheUnleashed.html"><IMG SRC="images/hm_NFSPULogo.gif" BORDER="0" WIDTH="209" HEIGHT="97" ALT=""></A></TD>
 	</TR>
 	</TABLE>
 	
