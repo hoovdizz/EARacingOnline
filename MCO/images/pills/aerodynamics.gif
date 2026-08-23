@@ -1,0 +1,2159 @@
+
+    
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        
+        
+
+<title>Electronic Arts Official Home Page</title>
+
+<meta property="og:title" content="Electronic Arts Home Page">
+<meta property="og:description" content="We exist to inspire the world through Play. Electronic Arts is a leading publisher of games on Console, PC and Mobile.">
+<meta property="og:url" content="http://www.ea.com/">
+<meta property="og:locale" content="en-US">
+<meta property="og:site_name" content="Electronic Arts Home Page">
+<meta property="og:image" content="
+
+http://media-eaplay.spark.ea.com/content/ea-com-play-2016/en_US/_jcr_content/sixteenNine.img.jpg
+">
+<meta property="og:type" content="custom">
+
+
+<meta name="description" content="We exist to inspire the world through Play. Electronic Arts is a leading publisher of games on Console, PC and Mobile.">
+<meta name="author" content="EA">
+<meta property="article:modified_time" content="2016-07-07T08:44:48Z">
+<meta property="article:published_time" content="2016-06-06T22:21:12Z">
+
+
+<meta name="twitter:card" content="Summary">
+<meta name="twitter:site" content="EA">
+<meta name="twitter:title" content="Electronic Arts Home Page">
+<meta name="twitter:description" content="We exist to inspire the world through Play. Electronic Arts is a leading publisher of games on Console, PC and Mobile.">
+<meta name="twitter:image" content="
+
+http://media-eaplay.spark.ea.com/content/ea-com-play-2016/en_US/_jcr_content/sixteenNine.img.jpg
+">
+<meta name="twitter:url" content="http://www.ea.com/">
+<meta name="twitter:creator" content="">
+
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "NewsArticle",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://www.ea.com/"
+    },
+    "image": {
+        "@type": "ImageObject",
+        "url": "
+
+http://media-eaplay.spark.ea.com/content/ea-com-play-2016/en_US/_jcr_content/sixteenNine.img.jpg
+",
+        "width": 1920, 
+        "height": 1080 
+    },
+    "author": {
+        "@type": "Person",
+        "name": "[ea-staff]"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "EA",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "
+
+http://media-eaplay.spark.ea.com/content/dam/ea/c-patternlibrary/logo/EA_logo.png",
+            "width": 60,
+            "height": 60
+        }
+    },
+    "inLanguage": "en",
+    "description": "We exist to inspire the world through Play. Electronic Arts is a leading publisher of games on Console, PC and Mobile.",
+    "datePublished": "2016-06-06T22:21:12Z",
+    "dateModified": "2016-07-07T08:44:48Z",
+    "headline": "Electronic Arts Home Page",
+    "alternativeHeadline": "",
+    "url": "http://www.ea.com/"
+}
+</script>
+
+    
+        <style>
+            body {
+                transition: opacity ease-in 0s;
+            }
+        </style>
+        <script>
+            // Use Native ShadowDOM when available and lazy register components
+            window.Polymer = { dom: 'shadow', lazyRegister: true };
+        </script>
+        <link rel="stylesheet" media="screen" href="/play2016/assets/stylesheets/main.min.css">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.22/webcomponents-lite.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.1/picturefill.min.js" async></script>
+        <script src="//w.soundcloud.com/player/api.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <link rel="import" href="//pl.ea.com/branch/ea-play-stable-3/elements/ea-elements.html" />
+        <link rel="icon" type="image/png" href="/play2016/assets/images/favicon.png">
+        <style type="text/css" media="screen">
+    /* TODO(pattern library team): LEV-2323 is in the backlog to extract this
+    and the JS out to static assets */
+    body {
+        margin: 0;
+    }
+
+    .wf-loading h1,
+    .wf-loading h2,
+    .wf-loading h3,
+    .wf-loading h4,
+    .wf-loading h5,
+    .wf-loading h6,
+    .wf-loading label,
+    .wf-loading span,
+    .wf-loading a,
+    .wf-loading th,
+    .wf-loading td,
+    .wf-loading p {
+        visibility: hidden;
+    }
+</style>
+
+
+
+        <script
+            type="text/javascript"
+                src="//tags.tiqcdn.com/utag/ea/eaplay-web/qa/utag.js"
+                async>
+        </script>
+        <style is="custom-style">
+        :root {
+        --ea-theme-color: #ff1e3c;
+        --ea-theme-dark-gradient: #ff1e3c;
+        --ea-theme-light-gradient: #ff1e3c;
+        --ea-theme-secondary-font-family: "brandon-grotesque";
+        }
+        </style>
+    </head>
+    <body unresolved>
+        
+            
+
+
+
+<nav is="ea-local-nav"
+    
+        home-text = "Home"
+        home-tooltip = ""
+        home-link = "/"
+    
+    
+        logo-image="
+
+http://media-eaplay.spark.ea.com/content/ea-com-play-2016/en_US/_global_/_jcr_content/ccm/componentwrapper/components/localnav/logoImage.img.png
+"
+    
+    
+    
+        theme = "dark"
+    
+    
+        shelf-type = "band"
+    
+    
+        open-drawer-text = "Menu"
+    
+    
+        open-drawer-tooltip = "Open Menu"
+    
+    
+        close-drawer-text = "Close"
+    
+    
+        close-drawer-tooltip = "Close Menu"
+    
+    
+    
+        hide-featured-product
+    
+    
+>
+    
+        
+            <a
+                is="ea-link"
+                class="eapl-local-nav__shelf-link"
+                href="http://www.ea.com/games"
+                title=""
+            >Games</a>
+        
+            <a
+                is="ea-link"
+                class="eapl-local-nav__shelf-link"
+                href="http://www.ea.com/news/"
+                title=""
+            >News</a>
+        
+            <a
+                is="ea-link"
+                class="eapl-local-nav__shelf-link"
+                href="http://www.ea.com/eaaccess"
+                title=""
+            >EA Access</a>
+        
+    
+    
+        
+            <a
+                is="ea-link"
+                class="eapl-local-nav__shelf-featured-link"
+                href="http://www.origin.com"
+                title=""
+            >Shop at Origin</a>
+        
+    
+    
+        
+            
+
+
+
+
+    <a
+        is="ea-link"
+        class="eapl-local-nav__drawer-link"
+        href="/play2016/"
+        title=""
+    >EA Play</a>
+
+
+
+        
+            
+
+
+
+
+    <a
+        is="ea-link"
+        class="eapl-local-nav__drawer-link"
+        href="http://www.ea.com/games"
+        title=""
+    >Games</a>
+
+
+
+        
+            
+
+
+
+
+    <a
+        is="ea-link"
+        class="eapl-local-nav__drawer-link"
+        href="http://www.ea.com/news"
+        title=""
+    >News</a>
+
+
+
+        
+            
+
+
+
+
+    <a
+        is="ea-link"
+        class="eapl-local-nav__drawer-link"
+        href="https://help.ea.com"
+        title=""
+    >Help</a>
+
+
+
+        
+            
+
+
+
+
+    <a
+        is="ea-link"
+        class="eapl-local-nav__drawer-link"
+        href="http://www.origin.com"
+        title=""
+    >Shop at Origin</a>
+
+
+
+        
+            
+
+
+
+
+    <a
+        is="ea-link"
+        class="eapl-local-nav__drawer-link"
+        href="http://www.ea.com/eaaccess"
+        title=""
+    >EA Access</a>
+
+
+
+        
+            
+
+
+
+
+    <a
+        is="ea-link"
+        class="eapl-local-nav__drawer-link"
+        href="http://careers.ea.com/"
+        title=""
+    >Careers</a>
+
+
+
+        
+    
+    
+
+
+
+
+
+</nav>
+
+        
+        
+        
+            
+
+
+
+<ea-hero
+    
+        layout="medium"
+    
+
+    
+        text-position="center"
+    
+
+    
+        text-align="center"
+    
+
+    
+        text-color="dark"
+    
+
+    
+
+    
+        background-color="light"
+    
+
+    
+
+    
+
+    
+        subtitle-text="YOUR COVER. YOUR CALL."
+    
+
+    
+        image-smallest="
+
+http://media-eaplay.spark.ea.com/content/ea-com-play-2016/en_US/_jcr_content/bodyPar/hero/image/xsmall.adaptive.320.full.jpg
+"
+        image-small="
+
+http://media-eaplay.spark.ea.com/content/ea-com-play-2016/en_US/_jcr_content/bodyPar/hero/image/small.adaptive.768.full.jpg
+"
+        image-medium="
+
+http://media-eaplay.spark.ea.com/content/ea-com-play-2016/en_US/_jcr_content/bodyPar/hero/image/medium.adaptive.1024.full.jpg
+"
+        image-large="
+
+http://media-eaplay.spark.ea.com/content/ea-com-play-2016/en_US/_jcr_content/bodyPar/hero/image/large.adaptive.1360.full.jpg
+"
+        image-largest="
+
+http://media-eaplay.spark.ea.com/content/ea-com-play-2016/en_US/_jcr_content/bodyPar/hero/image/xlarge.img.jpg
+"
+        image-tooltip=""
+    
+
+    
+        logo-image="
+
+http://media-eaplay.spark.ea.com/content/ea-com-play-2016/en_US/_jcr_content/bodyPar/hero/logoImage.img.png
+"
+    
+    
+    
+        spacing-bottom="none"
+    
+>
+    
+
+
+
+
+
+    
+
+
+
+
+    
+
+<ea-html5-video
+    
+
+    
+
+    
+        autoplay=""
+    
+
+    
+
+    
+        loop=""
+    
+
+    
+        muted=""
+    
+
+    
+
+    
+></ea-html5-video>
+
+
+    
+
+
+
+
+    
+
+<a
+    is="ea-cta"
+    
+        type="standard"
+    
+    
+        href="https://www.easports.com/fifa/cover-vote"
+    
+    
+    
+        icon="arrow"
+    
+    
+        fill-color="none"
+    
+    
+        text-color="dark"
+    
+    
+    
+    
+>
+    
+        Vote Now
+    
+</a>
+
+
+
+
+</ea-hero>
+
+        
+            
+
+
+<ea-section
+    
+        type="railed"
+    
+    
+        layout="100"
+    
+    
+        background-color="light"
+    
+    
+        spacing-top="none"
+    
+    
+        spacing-bottom="small"
+    
+    
+>
+    
+
+
+
+
+    
+<ea-section-column
+    
+        indent-left=""
+    
+    
+        indent-right=""
+    
+>
+    
+
+
+
+
+    
+
+<ea-subheading
+    
+        type="ordered"
+    
+
+    
+        layout="large"
+    
+
+    
+        text-align="left"
+    
+
+    
+        text-color="dark"
+    
+
+    
+
+    
+        title-text="  "
+    
+
+    
+    
+        spacing-top="medium"
+    
+    
+        spacing-bottom="none"
+    
+>
+</ea-subheading>
+
+
+    
+
+<ea-grid
+    
+
+
+    type="ordered"
+
+
+
+
+    layout="3up"
+
+
+    tile-type="vertical"
+
+
+    tile-text-color="dark"
+
+
+    tile-color="none"
+
+
+
+
+
+
+
+    hide-brand-stroke
+
+
+    
+        spacing-top="medium"
+    
+    
+        spacing-bottom="medium"
+    
+>
+    <ea-grid-items>
+        
+            <ea-grid-item>
+            
+
+
+
+<ea-tile
+    
+    
+    
+        media="
+
+http://media-eaplay.spark.ea.com/content/ea-com-play-2016/en_US/_jcr_content/bodyPar/section/columns/column/content/grid/tiles/tile/image.img.jpg
+"
+    
+    
+        eyebrow-text="EA PLAY"
+    
+    
+    
+        title-text="How SpecialEffect Helped Tom Clark Play Again"
+        
+>
+    
+        
+
+
+
+
+
+    
+    <ea-tile-copy>
+    
+        <p>Special Effect finds solutions for players with physical disabilities.</p>
+
+    
+    </ea-tile-copy>
+    
+    
+        
+
+
+
+
+    
+
+<a
+    is="ea-cta"
+    
+        type="text"
+    
+    
+        href="/play2016/news/how-specialeffect-helped-tom-clark-play-again"
+    
+    
+    
+        icon="none"
+    
+    
+        fill-color="none"
+    
+    
+        text-color="dark"
+    
+    
+    
+    
+>
+    
+        Read Tom&#x27;s Story
+    
+</a>
+
+
+
+
+    
+</ea-tile>
+
+
+            </ea-grid-item>
+        
+            <ea-grid-item>
+            
+
+
+
+<ea-tile
+    
+    
+    
+        media="
+
+http://media-eaplay.spark.ea.com/content/ea-com-play-2016/en_US/_jcr_content/bodyPar/section/columns/column/content/grid/tiles/tile_0/image.img.jpg
+"
+    
+    
+        eyebrow-text="The Sims™ 4"
+    
+    
+    
+        title-text="Kids Room Stuff Now Available!"
+        
+>
+    
+        
+
+
+
+
+
+    
+    <ea-tile-copy>
+    
+        <p>Personalize kids' bedrooms that spark the imagination of your Sims.</p>
+
+    
+    </ea-tile-copy>
+    
+    
+        
+
+
+
+
+    
+
+<a
+    is="ea-cta"
+    
+        type="text"
+    
+    
+        href="https://www.thesims.com/news/the-sims-4-kids-room-stuff-reveal"
+    
+    
+    
+        icon="none"
+    
+    
+        fill-color="none"
+    
+    
+        text-color="dark"
+    
+    
+    
+    
+>
+    
+        Learn more
+    
+</a>
+
+
+
+
+    
+</ea-tile>
+
+
+            </ea-grid-item>
+        
+            <ea-grid-item>
+            
+
+
+
+<ea-tile
+    
+    
+    
+        media="
+
+http://media-eaplay.spark.ea.com/content/ea-com-play-2016/en_US/_jcr_content/bodyPar/section/columns/column/content/grid/tiles/tile_1/image.img.jpg
+"
+    
+    
+        eyebrow-text="EA ACCESS"
+    
+    
+    
+        title-text="Coming Soon to The Vault"
+        
+>
+    
+        
+
+
+
+
+
+    
+    <ea-tile-copy>
+    
+        <p>Need for Speed and Unravel Join the EA Access Vault on July 12</p>
+
+    
+    </ea-tile-copy>
+    
+    
+        
+
+
+
+
+    
+
+<a
+    is="ea-cta"
+    
+        type="text"
+    
+    
+        href="http://www.ea.com/eaaccess"
+    
+    
+    
+        icon="none"
+    
+    
+        fill-color="none"
+    
+    
+        text-color="dark"
+    
+    
+        target="_blank"
+    
+    
+    
+>
+    
+        Join EA Access
+    
+</a>
+
+
+
+
+    
+</ea-tile>
+
+
+            </ea-grid-item>
+        
+    </ea-grid-items>
+    
+
+
+
+
+
+</ea-grid>
+
+
+
+
+</ea-section-column>
+
+
+</ea-section>
+        
+            
+
+
+<ea-section
+    
+        type="railed"
+    
+    
+        layout="100"
+    
+    
+        background-color="none"
+    
+    
+        spacing-top="medium"
+    
+    
+        spacing-bottom="small"
+    
+    
+>
+    
+
+
+
+
+    
+<ea-section-column
+    
+        indent-left=""
+    
+    
+        indent-right=""
+    
+>
+    
+
+
+
+
+    
+
+<ea-subheading
+    
+        type="ordered"
+    
+
+    
+        layout="small"
+    
+
+    
+        text-align="center"
+    
+
+    
+        text-color="dark"
+    
+
+    
+
+    
+        title-text="LATEST GAMES"
+    
+
+    
+    
+        spacing-top="medium"
+    
+    
+        spacing-bottom="none"
+    
+>
+</ea-subheading>
+
+
+    
+
+<ea-box-set
+    
+        layout="3up"
+    
+    
+        spacing-top="none"
+    
+    
+        spacing-bottom="medium"
+    
+>
+    
+        <ea-box-set-item>
+        
+
+
+
+<ea-game-box
+    
+        background-image="
+
+http://media-eaplay.spark.ea.com/content/ea-com-play-2016/en_US/_jcr_content/bodyPar/section_1/columns/column/content/boxset/gameBoxes/gamebox/backgroundImage.img.jpg
+"
+    
+    
+        logo-url="
+
+http://media-eaplay.spark.ea.com/content/ea-com-play-2016/en_US/_jcr_content/bodyPar/section_1/columns/column/content/boxset/gameBoxes/gamebox/logoImage.img.svg
+"
+    
+    
+    
+    
+    show-back-alt=""
+    show-front-alt=""
+    title=""
+    sale-text=""
+>
+    
+
+
+
+
+
+    
+
+
+
+
+    
+
+<a
+    class="eapl-link"
+    href="https://www.battlefield.com/news"
+    target=""
+>
+LATEST NEWS
+</a>
+
+    
+
+<a
+    class="eapl-link"
+    href="https://www.battlefield.com/community/insider"
+    target=""
+>
+INSIDER
+</a>
+
+    
+
+<a
+    class="eapl-link"
+    href="https://www.battlefield.com/buy/battlefield-1"
+    target=""
+>
+PRE-ORDER
+</a>
+
+
+    
+
+
+
+
+
+</ea-game-box>
+
+
+
+        </ea-box-set-item>
+    
+        <ea-box-set-item>
+        
+
+
+
+<ea-game-box
+    
+        background-image="
+
+http://media-eaplay.spark.ea.com/content/ea-com-play-2016/en_US/_jcr_content/bodyPar/section_1/columns/column/content/boxset/gameBoxes/gamebox_0/backgroundImage.img.jpg
+"
+    
+    
+        logo-url="
+
+http://media-eaplay.spark.ea.com/content/ea-com-play-2016/en_US/_jcr_content/bodyPar/section_1/columns/column/content/boxset/gameBoxes/gamebox_0/logoImage.img.svg
+"
+    
+    
+    
+    
+    show-back-alt=""
+    show-front-alt=""
+    title=""
+    sale-text=""
+>
+    
+
+
+
+
+
+    
+
+
+
+
+    
+
+<a
+    class="eapl-link"
+    href="http://www.titanfall.com"
+    target=""
+>
+SEE GAMEPLAY
+</a>
+
+    
+
+<a
+    class="eapl-link"
+    href="http://www.titanfall.com/en_us/media/"
+    target=""
+>
+WATCH TRAILER
+</a>
+
+    
+
+<a
+    class="eapl-link"
+    href="http://www.titanfall.com/en_us/pre-order/"
+    target=""
+>
+PRE-ORDER
+</a>
+
+    
+
+<a
+    class="eapl-link"
+    href="http://www.titanfall.com/en_us/newsletter/"
+    target=""
+>
+GET NEWS
+</a>
+
+
+    
+
+
+
+
+
+</ea-game-box>
+
+
+
+        </ea-box-set-item>
+    
+        <ea-box-set-item>
+        
+
+
+
+<ea-game-box
+    
+        background-image="
+
+http://media-eaplay.spark.ea.com/content/ea-com-play-2016/en_US/_jcr_content/bodyPar/section_1/columns/column/content/boxset/gameBoxes/gamebox_2/backgroundImage.img.jpg
+"
+    
+    
+        logo-url="
+
+http://media-eaplay.spark.ea.com/content/ea-com-play-2016/en_US/_jcr_content/bodyPar/section_1/columns/column/content/boxset/gameBoxes/gamebox_2/logoImage.img.svg
+"
+    
+    
+    
+    
+    show-back-alt=""
+    show-front-alt=""
+    title=""
+    sale-text=""
+>
+    
+
+
+
+
+
+    
+
+
+
+
+    
+
+<a
+    class="eapl-link"
+    href="https://www.easports.com/fifa/news"
+    target=""
+>
+NEWS
+</a>
+
+    
+
+<a
+    class="eapl-link"
+    href="https://www.easports.com/fifa/features"
+    target=""
+>
+FEATURES
+</a>
+
+    
+
+<a
+    class="eapl-link"
+    href="https://www.easports.com/fifa/newsletter"
+    target=""
+>
+INSIDER
+</a>
+
+    
+
+<a
+    class="eapl-link"
+    href="https://www.easports.com/fifa/buy"
+    target=""
+>
+PRE-ORDER
+</a>
+
+
+    
+
+
+
+
+
+</ea-game-box>
+
+
+
+        </ea-box-set-item>
+    
+    
+
+
+
+
+
+</ea-box-set>
+
+
+    
+
+<ea-box-set
+    
+        layout="3up"
+    
+    
+        spacing-top="none"
+    
+    
+        spacing-bottom="medium"
+    
+>
+    
+        <ea-box-set-item>
+        
+
+
+
+<ea-game-box
+    
+        background-image="
+
+http://media-eaplay.spark.ea.com/content/ea-com-play-2016/en_US/_jcr_content/bodyPar/section_1/columns/column/content/boxset_0/gameBoxes/gamebox/backgroundImage.img.jpg
+"
+    
+    
+        logo-url="
+
+http://media-eaplay.spark.ea.com/content/ea-com-play-2016/en_US/_jcr_content/bodyPar/section_1/columns/column/content/boxset_0/gameBoxes/gamebox/logoImage.img.svg
+"
+    
+    
+    
+    
+    show-back-alt=""
+    show-front-alt=""
+    title=""
+    sale-text=""
+>
+    
+
+
+
+
+
+    
+
+
+
+
+    
+
+<a
+    class="eapl-link"
+    href="https://www.easports.com/madden-nfl/news"
+    target=""
+>
+NEWS
+</a>
+
+    
+
+<a
+    class="eapl-link"
+    href="https://www.easports.com/madden-nfl/features"
+    target=""
+>
+FEATURES
+</a>
+
+    
+
+<a
+    class="eapl-link"
+    href="https://www.easports.com/madden-nfl/newsletter"
+    target=""
+>
+INSIDER
+</a>
+
+    
+
+<a
+    class="eapl-link"
+    href="https://www.easports.com/madden-nfl/buy"
+    target=""
+>
+PRE-ORDER
+</a>
+
+
+    
+
+
+
+
+
+</ea-game-box>
+
+
+
+        </ea-box-set-item>
+    
+        <ea-box-set-item>
+        
+
+
+
+<ea-game-box
+    
+        background-image="
+
+http://media-eaplay.spark.ea.com/content/ea-com-play-2016/en_US/_jcr_content/bodyPar/section_1/columns/column/content/boxset_0/gameBoxes/gamebox_0/backgroundImage.img.jpg
+"
+    
+    
+        logo-url="
+
+http://media-eaplay.spark.ea.com/content/ea-com-play-2016/en_US/_jcr_content/bodyPar/section_1/columns/column/content/boxset_0/gameBoxes/gamebox_0/logoImage.img.svg
+"
+    
+    
+    
+    
+    show-back-alt=""
+    show-front-alt=""
+    title=""
+    sale-text=""
+>
+    
+
+
+
+
+
+    
+
+
+
+
+    
+
+<a
+    class="eapl-link"
+    href="https://www.easports.com/nhl/news"
+    target=""
+>
+NEWS
+</a>
+
+    
+
+<a
+    class="eapl-link"
+    href="https://www.easports.com/nhl/newsletter"
+    target=""
+>
+INSIDER
+</a>
+
+    
+
+<a
+    class="eapl-link"
+    href="https://www.easports.com/nhl/beta"
+    target=""
+>
+BETA SIGN UP
+</a>
+
+    
+
+<a
+    class="eapl-link"
+    href="https://www.easports.com/nhl/buy"
+    target=""
+>
+PRE-ORDER 
+</a>
+
+
+    
+
+
+
+
+
+</ea-game-box>
+
+
+
+        </ea-box-set-item>
+    
+        <ea-box-set-item>
+        
+
+
+
+<ea-game-box
+    
+        background-image="
+
+http://media-eaplay.spark.ea.com/content/ea-com-play-2016/en_US/_jcr_content/bodyPar/section_1/columns/column/content/boxset_0/gameBoxes/gamebox_3/backgroundImage.img.jpg
+"
+    
+    
+        logo-url="
+
+http://media-eaplay.spark.ea.com/content/ea-com-play-2016/en_US/_jcr_content/bodyPar/section_1/columns/column/content/boxset_0/gameBoxes/gamebox_3/logoImage.img.svg
+"
+    
+    
+    
+    
+    show-back-alt=""
+    show-front-alt=""
+    title=""
+    sale-text=""
+>
+    
+
+
+
+
+
+    
+
+
+
+
+    
+
+<a
+    class="eapl-link"
+    href="http://www.mirrorsedge.com/news"
+    target=""
+>
+NEWS &amp; MEDIA
+</a>
+
+    
+
+<a
+    class="eapl-link"
+    href="http://www.mirrorsedge.com/gameplay"
+    target=""
+>
+GAMEPLAY
+</a>
+
+    
+
+<a
+    class="eapl-link"
+    href="http://www.mirrorsedge.com/buy"
+    target=""
+>
+BUY NOW
+</a>
+
+
+    
+
+
+
+
+
+</ea-game-box>
+
+
+
+        </ea-box-set-item>
+    
+    
+
+
+
+
+
+</ea-box-set>
+
+
+
+</ea-section-column>
+
+
+</ea-section>
+        
+            
+
+
+<ea-section
+    
+        type="railed"
+    
+    
+        layout="33:33:33"
+    
+    
+        background-color="none"
+    
+    
+        spacing-top="medium"
+    
+    
+        spacing-bottom="medium"
+    
+    
+>
+    
+
+
+
+
+    
+<ea-section-column
+    
+        indent-left=""
+    
+    
+        indent-right=""
+    
+>
+    
+
+
+
+
+
+</ea-section-column>
+
+    
+<ea-section-column
+    
+        indent-left="1"
+    
+    
+        indent-right="1"
+    
+>
+    
+
+
+
+
+    
+
+<ea-subheading
+    
+        type="ordered"
+    
+
+    
+        layout="small"
+    
+
+    
+        text-align="left"
+    
+
+    
+        text-color="dark"
+    
+
+    
+
+    
+        title-text=" "
+    
+
+    
+    
+        spacing-top="small"
+    
+    
+        spacing-bottom="none"
+    
+>
+</ea-subheading>
+
+
+    
+
+<a
+    is="ea-cta"
+    
+        type="standard"
+    
+    
+        href="http://www.ea.com/games"
+    
+    
+    
+        icon="none"
+    
+    
+        fill-color="none"
+    
+    
+        text-color="dark"
+    
+    
+    
+    
+>
+    
+        ALL GAMES
+    
+</a>
+
+
+
+
+</ea-section-column>
+
+    
+<ea-section-column
+    
+        indent-left=""
+    
+    
+        indent-right=""
+    
+>
+    
+
+
+
+
+
+</ea-section-column>
+
+
+</ea-section>
+        
+            
+
+
+<ea-section
+    
+        type="railed"
+    
+    
+        layout="100"
+    
+    
+        background-color="light"
+    
+    
+        spacing-top="medium"
+    
+    
+        spacing-bottom="none"
+    
+    
+>
+    
+
+
+
+
+    
+<ea-section-column
+    
+        indent-left=""
+    
+    
+        indent-right=""
+    
+>
+    
+
+
+
+
+    
+
+<ea-subheading
+    
+        type="ordered"
+    
+
+    
+        layout="large"
+    
+
+    
+        text-align="center"
+    
+
+    
+        text-color="dark"
+    
+
+    
+
+    
+        title-text=" "
+    
+
+    
+    
+        spacing-top="small"
+    
+    
+        spacing-bottom="none"
+    
+>
+</ea-subheading>
+
+
+    
+
+<ea-subheading
+    
+        type="ordered"
+    
+
+    
+        layout="small"
+    
+
+    
+        text-align="center"
+    
+
+    
+        text-color="dark"
+    
+
+    
+
+    
+        title-text="Latest EA Play News"
+    
+
+    
+    
+        spacing-top="large"
+    
+    
+        spacing-bottom="none"
+    
+>
+</ea-subheading>
+
+
+
+</ea-section-column>
+
+
+</ea-section>
+        
+            
+
+
+<ea-section
+    
+        type="full-bleed"
+    
+    
+        layout="100"
+    
+    
+        background-color="light"
+    
+    
+        spacing-top="none"
+    
+    
+        spacing-bottom="none"
+    
+    
+>
+    
+
+
+
+
+    
+<ea-section-column
+    
+        indent-left=""
+    
+    
+        indent-right=""
+    
+>
+    
+
+
+
+
+    
+
+<div id="event-feed-query-parameters" event-feed-query-parameters="spredfastUrl=http://api.massrelevance.com/2j9r62pph6/ea-play.json&amp;entity=ea/ea-play&amp;spredFastCount=4&amp;language=en&amp;region=us&amp;newsFeedCount=20">
+</div>
+
+
+    
+<div feed-count="24" class="social-grid">
+
+</div>
+
+
+
+</ea-section-column>
+
+
+</ea-section>
+        
+    
+        
+            
+
+
+
+<footer
+    is="ea-local-footer"
+    theme="dark"
+>
+    <ea-local-links
+        title-text=""
+        text-color="dark"
+    >
+    
+        
+            <a
+                is="ea-link"
+                href="/play2016"
+                title="Play2016"
+            >Play2016</a>
+        
+            <a
+                is="ea-link"
+                href="/play2016/news"
+                title="News"
+            >News</a>
+        
+    
+    </ea-local-links>
+
+    <ea-social-links
+        text-color="dark"
+        title-text="Join The Conversation"
+        social-icon-color="brand"
+    >
+    
+        
+            <a
+            is="ea-social-link"
+            href="https://www.facebook.com/EA/"
+            social-network="facebook"
+            title="Facebook"
+            
+                target="_blank"
+            
+            ></a>
+        
+            <a
+            is="ea-social-link"
+            href="https://www.twitter.com/ea"
+            social-network="twitter"
+            title="Twitter"
+            
+                target="_blank"
+            
+            ></a>
+        
+            <a
+            is="ea-social-link"
+            href="https://plus.google.com/116461230478901689392/"
+            social-network="gplus"
+            title="Google Plus"
+            
+                target="_blank"
+            
+            ></a>
+        
+            <a
+            is="ea-social-link"
+            href="https://www.youtube.com/EAvideos"
+            social-network="youtube"
+            title="YouTube"
+            
+                target="_blank"
+            
+            ></a>
+        
+            <a
+            is="ea-social-link"
+            href="https://www.instagram.com/ea"
+            social-network="instagram"
+            title="Instagram"
+            
+                target="_blank"
+            
+            ></a>
+        
+            <a
+            is="ea-social-link"
+            href="https://www.twitch.tv/ea"
+            social-network="twitch"
+            title="Twitch"
+            
+                target="_blank"
+            
+            ></a>
+        
+    
+    </ea-social-links>
+
+    
+
+    
+</footer>
+
+        
+        
+            
+
+
+
+<footer
+    is="ea-network-footer"
+    theme="dark"
+
+    
+        logo-image="
+
+http://media-eaplay.spark.ea.com/content/ea-com-play-2016/en_US/_global_/_jcr_content/ccm/componentwrapper_1/components/globalfooter/logoImage.img.png
+"
+        logo-tooltip=""
+    
+
+    
+        logo-link-url="http://www.ea.com"
+        logo-link-text="EA"
+        logo-link-tooltip="EA"
+    
+    >
+    
+        <ea-network-links
+            text-color="dark"
+        >
+        
+            <a
+                href="http://www.ea.com/games"
+                title="Browse Games"
+            >Browse Games</a>
+        
+            <a
+                href="http://www.ea.com/blog"
+                title="Latest News"
+            >Latest News</a>
+        
+            <a
+                href="https://help.ea.com"
+                title="Help Center"
+            >Help Center</a>
+        
+            <a
+                href="http://www.ea.com/about"
+                title="About Us"
+            >About Us</a>
+        
+        </ea-network-links>
+    
+
+    
+
+
+
+<ea-dropdown
+    theme="light"
+    value="en-us"
+    
+    >
+    
+        <ea-dropdown-option value="en-us">English (United States)</ea-dropdown-option>
+    
+        <ea-dropdown-option value="en-gb">English (United Kingdom)</ea-dropdown-option>
+    
+        <ea-dropdown-option value="en-au">English (Australia)</ea-dropdown-option>
+    
+        <ea-dropdown-option value="fr-fr">Français</ea-dropdown-option>
+    
+        <ea-dropdown-option value="de-de">Deutsch</ea-dropdown-option>
+    
+        <ea-dropdown-option value="it-it">Italiano</ea-dropdown-option>
+    
+        <ea-dropdown-option value="ja-jp">日本語</ea-dropdown-option>
+    
+        <ea-dropdown-option value="pl-pl">polski</ea-dropdown-option>
+    
+        <ea-dropdown-option value="pt-br">Português (Brasil)</ea-dropdown-option>
+    
+        <ea-dropdown-option value="ru-ru">Русский</ea-dropdown-option>
+    
+        <ea-dropdown-option value="es-es">Español</ea-dropdown-option>
+    
+</ea-dropdown>
+
+    <ea-network-legal
+        copyright-text="© 2016 Electronic Arts Inc."
+        text-color="dark"
+    >
+    
+        
+            <a
+                href="http://www.ea.com/1/legal-notices"
+                title="Legal Notices"
+            >Legal Notices</a>
+        
+            <a
+                href="http://www.ea.com/1/product-eulas"
+                title="Product EULAs And Disclaimers"
+            >Product EULAs And Disclaimers</a>
+        
+            <a
+                href="http://www.ea.com/1/service-updates"
+                title="Online Service Updates"
+            >Online Service Updates</a>
+        
+            <a
+                href="http://www.ea.com/terms-of-service"
+                title="Terms Of Service"
+            >Terms Of Service</a>
+        
+            <a
+                href="http://tos.ea.com/legalapp/WEBPRIVACY/US/en/PC/"
+                title="Privacy &amp; Cookie Policy (Your Privacy Rights)"
+            >Privacy &amp; Cookie Policy</a>
+        
+    
+    </ea-network-legal>
+
+    
+
+
+
+<ea-truste
+    message="Cookies Help Us Deliver Our Services And Provide Personalized Experiences. By Using This Website, You Agree To Our Use Of Cookies. You Can Change Your Preferences At Any Time."
+    preferences-text="Cookie Preferences"
+    domain="Ea.Com"
+    
+        logo-image="
+
+http://media-eaplay.spark.ea.com/content/ea-com-play-2016/en_US/_global_/_jcr_content/ccm/componentwrapper_1/components/globalfooter/truste/logo.img.png
+"
+        logo-tooltip=""
+    
+    
+        link-url="https://www.truste.com"
+        link-text="TRUSTE"
+        link-tooltip="TRUSTE"
+    
+></ea-truste>
+
+</footer>
+
+        
+        <script src="//fonts.ea.com/txn1klh.js"></script>
+        <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+        <script src="/play2016/assets/javascripts/main.js"></script>
+
+        <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs>
+                <symbol id="icon-chevron-thin-left" viewBox="0 0 20 20">
+                    <title>chevron-thin-left</title>
+                    <path class="path1" d="M13.891 17.418c0.268 0.272 0.268 0.709 0 0.979s-0.701 0.271-0.969 0l-7.83-7.908c-0.268-0.27-0.268-0.707 0-0.979l7.83-7.908c0.268-0.27 0.701-0.27 0.969 0s0.268 0.709 0 0.979l-7.141 7.419 7.141 7.418z"></path>
+                </symbol>
+                <symbol id="icon-chevron-thin-right" viewBox="0 0 20 20">
+                    <title>chevron-thin-right</title>
+                    <path class="path1" d="M13.25 10l-7.141-7.42c-0.268-0.27-0.268-0.707 0-0.979 0.268-0.27 0.701-0.27 0.969 0l7.83 7.908c0.268 0.271 0.268 0.709 0 0.979l-7.83 7.908c-0.268 0.271-0.701 0.27-0.969 0s-0.268-0.707 0-0.979l7.141-7.417z"></path>
+                </symbol>
+                <symbol id="icon-controller-play" viewBox="0 0 20 20">
+                    <title>controller-play</title>
+                    <path class="path1" d="M15 10.001c0 0.299-0.305 0.514-0.305 0.514l-8.561 5.303c-0.624 0.409-1.134 0.106-1.134-0.669v-10.297c0-0.777 0.51-1.078 1.135-0.67l8.561 5.305c-0.001 0 0.304 0.215 0.304 0.514z"></path>
+                </symbol>
+                <symbol id="icon-plus" viewBox="0 0 20 20">
+                    <title>plus</title>
+                    <path class="path1" d="M16 10c0 0.553-0.048 1-0.601 1h-4.399v4.399c0 0.552-0.447 0.601-1 0.601s-1-0.049-1-0.601v-4.399h-4.399c-0.552 0-0.601-0.447-0.601-1s0.049-1 0.601-1h4.399v-4.399c0-0.553 0.447-0.601 1-0.601s1 0.048 1 0.601v4.399h4.399c0.553 0 0.601 0.447 0.601 1z"></path>
+                </symbol>
+                <symbol id="icon-instagram" viewBox="0 0 20 20">
+                    <title>instagram</title>
+                    <path class="path1" d="M17 1h-14c-1.1 0-2 0.9-2 2v14c0 1.101 0.9 2 2 2h14c1.1 0 2-0.899 2-2v-14c0-1.1-0.9-2-2-2zM9.984 15.523c3.059 0 5.538-2.481 5.538-5.539 0-0.338-0.043-0.664-0.103-0.984h1.581v7.216c0 0.382-0.31 0.69-0.693 0.69h-12.614c-0.383 0-0.693-0.308-0.693-0.69v-7.216h1.549c-0.061 0.32-0.104 0.646-0.104 0.984 0 3.059 2.481 5.539 5.539 5.539zM6.523 9.984c0-1.912 1.55-3.461 3.462-3.461s3.462 1.549 3.462 3.461-1.551 3.462-3.462 3.462c-1.913 0-3.462-1.55-3.462-3.462zM16.307 6h-1.615c-0.382 0-0.692-0.312-0.692-0.692v-1.617c0-0.382 0.31-0.691 0.691-0.691h1.615c0.384 0 0.694 0.309 0.694 0.691v1.616c0 0.381-0.31 0.693-0.693 0.693z"></path>
+                </symbol>
+                <symbol id="icon-twitter" viewBox="0 0 20 20">
+                    <title>twitter</title>
+                    <path class="path1" d="M17.316 6.246c0.008 0.162 0.011 0.326 0.011 0.488 0 4.99-3.797 10.742-10.74 10.742-2.133 0-4.116-0.625-5.787-1.697 0.296 0.035 0.596 0.053 0.9 0.053 1.77 0 3.397-0.604 4.688-1.615-1.651-0.031-3.046-1.121-3.526-2.621 0.23 0.043 0.467 0.066 0.71 0.066 0.345 0 0.679-0.045 0.995-0.131-1.727-0.348-3.028-1.873-3.028-3.703 0-0.016 0-0.031 0-0.047 0.509 0.283 1.092 0.453 1.71 0.473-1.013-0.678-1.68-1.832-1.68-3.143 0-0.691 0.186-1.34 0.512-1.898 1.861 2.285 4.644 3.787 7.781 3.945-0.064-0.277-0.097-0.564-0.097-0.861 0-2.084 1.689-3.773 3.774-3.773 1.086 0 2.067 0.457 2.756 1.191 0.859-0.17 1.667-0.484 2.397-0.916-0.282 0.881-0.881 1.621-1.66 2.088 0.764-0.092 1.49-0.293 2.168-0.594-0.506 0.758-1.146 1.422-1.884 1.953z"></path>
+                </symbol>
+
+                <symbol id="icon-facebook" viewBox="0 0 20 20">
+                <title>facebook</title>
+                <path class="path1" d="M17 1h-14c-1.1 0-2 0.9-2 2v14c0 1.101 0.9 2 2 2h7v-7h-2v-2.475h2v-2.050c0-2.164 1.212-3.684 3.766-3.684l1.803 0.002v2.605h-1.197c-0.994 0-1.372 0.746-1.372 1.438v1.69h2.568l-0.568 2.474h-2v7h4c1.1 0 2-0.899 2-2v-14c0-1.1-0.9-2-2-2z"></path>
+                </symbol>
+
+                <symbol id="icon-reply" viewBox="0 0 20 20">
+                <title>reply</title>
+                <path class="path1" d="M19 16.685c0 0-2.225-9.732-11-9.732v-3.984l-7 6.573 7 6.69v-4.357c4.763-0.001 8.516 0.421 11 4.81z"></path>
+                </symbol>
+
+                <symbol id="icon-person_add" viewBox="0 0 24 24">
+                <title>person_add</title>
+                <path class="path1" d="M15 14.016c2.672 0 8.016 1.313 8.016 3.984v2.016h-16.031v-2.016c0-2.672 5.344-3.984 8.016-3.984zM6 9.984h3v2.016h-3v3h-2.016v-3h-3v-2.016h3v-3h2.016v3zM15 12c-2.203 0-3.984-1.781-3.984-3.984s1.781-4.031 3.984-4.031 3.984 1.828 3.984 4.031-1.781 3.984-3.984 3.984z"></path>
+                </symbol>
+
+                <symbol id="icon-retweet" viewBox="0 0 20 20">
+                <title>retweet</title>
+                <path class="path1" d="M5 13v-5h2l-3.5-4-3.5 4h2v6c0 1.104 0.895 2 2 2h9.482l-2.638-3h-5.844zM9.156 7l-2.638-3h9.482c1.104 0 2 0.897 2 2v6h2l-3.5 4-3.5-4h2v-5h-5.844z"></path>
+                </symbol>
+
+                <symbol id="icon-star" viewBox="0 0 20 20">
+                <title>star</title>
+                <path class="path1" d="M10 1.3l2.388 6.722h6.412l-5.232 3.948 1.871 6.928-5.439-4.154-5.438 4.154 1.87-6.928-5.233-3.948h6.412l2.389-6.722z"></path>
+                </symbol>
+
+                <symbol id="icon-eye" viewBox="0 0 20 20">
+                <title>eye</title>
+                <path class="path1" d="M10 4.4c-6.561 0-10 4.832-10 5.6 0 0.766 3.439 5.6 10 5.6s10-4.834 10-5.6c0-0.768-3.44-5.6-10-5.6zM10 14.307c-2.455 0-4.445-1.928-4.445-4.307s1.99-4.309 4.445-4.309c2.455 0 4.444 1.93 4.444 4.309s-1.989 4.307-4.444 4.307zM10 10c-0.407-0.447 0.663-2.154 0-2.154-1.228 0-2.223 0.965-2.223 2.154s0.995 2.154 2.223 2.154c1.227 0 2.223-0.965 2.223-2.154 0-0.547-1.877 0.379-2.223 0z"></path>
+                </symbol>
+
+                <symbol id="icon-link" viewBox="0 0 20 20">
+                <title>link</title>
+                <path class="path1" d="M7.859 14.691l-0.81 0.805c-0.701 0.695-1.843 0.695-2.545 0-0.336-0.334-0.521-0.779-0.521-1.252s0.186-0.916 0.521-1.252l2.98-2.955c0.617-0.613 1.779-1.515 2.626-0.675 0.389 0.386 1.016 0.384 1.403-0.005 0.385-0.389 0.383-1.017-0.006-1.402-1.438-1.428-3.566-1.164-5.419 0.675l-2.98 2.956c-0.715 0.709-1.108 1.654-1.108 2.658 0 1.006 0.394 1.949 1.108 2.658 0.736 0.73 1.702 1.096 2.669 1.096s1.934-0.365 2.669-1.096l0.811-0.805c0.389-0.385 0.391-1.012 0.005-1.4s-1.014-0.39-1.403-0.006zM16.891 3.207c-1.547-1.534-3.709-1.617-5.139-0.197l-1.009 1.002c-0.389 0.386-0.392 1.013-0.006 1.401 0.386 0.389 1.013 0.391 1.402 0.005l1.010-1.001c0.74-0.736 1.711-0.431 2.346 0.197 0.336 0.335 0.522 0.779 0.522 1.252s-0.186 0.917-0.522 1.251l-3.18 3.154c-1.454 1.441-2.136 0.766-2.427 0.477-0.389-0.386-1.016-0.383-1.401 0.005s-0.384 1.017 0.005 1.401c0.668 0.662 1.43 0.99 2.228 0.99 0.977 0 2.010-0.492 2.993-1.467l3.18-3.153c0.712-0.71 1.107-1.654 1.107-2.658s-0.395-1.949-1.109-2.659z"></path>
+                </symbol>
+            </defs>
+        </svg>
+    </body>
+</html>
+

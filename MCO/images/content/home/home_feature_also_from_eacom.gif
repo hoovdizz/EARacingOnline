@@ -1,0 +1,228 @@
+<html>
+<head>
+<title>Motor City Online by EA.com | Home</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<META NAME="Keywords" CONTENT="Motor City Online, mco, hotrods, racing, cars, vintage automobiles, motor city, need for speed, racecars, online racing, classic cars">
+<link rel="stylesheet" href="/css/mcohome.css" type="text/css">
+<style>
+A.leftnavlg:link	{color:white;text-decoration:none;}
+A.leftnavlg:hover	{color:yellow;text-decoration:none;}
+A.leftnavlg:active	{color:yellow;text-decoration:none;}
+A.footerlink:link	{color:#000000;text-decoration:none;}
+A.footerlink:hover	{color:#AB3B35;text-decoration:none;}
+A.footerlink:active	{color:#000000;text-decoration:none;}
+A.fanlink:hover		{color:#AB3B35;}
+</style>
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" font="arial" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onLoad="MM_preloadImages('http://images.ea.com/eagames/official/mco/ui/buynow_button_over.gif','http://images.ea.com/eagames/official/mco/ui/tier1over.gif','http://images.ea.com/eagames/official/mco/ui/tier2over.gif')" link="#993333" vlink="#993333" alink="#993333" background="http://images.ea.com/eagames/official/mco/ui/beige.jpg">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr> <!-- HEADER ROW BEGINS -->
+	<td>
+		<table width="100%" border="0" cellspacing="0" cellpadding="0" height="82" align="left">
+		<!-- MCO TITLE BAR (BANNER AD NEEDED) -->
+		<tr>
+			<td height="82" background="http://images.ea.com/eagames/official/mco/ui/leather_tile.jpg" align="left" valign="middle"><a href="http://www.motorcityonline.com"><img src="http://images.ea.com/eagames/official/mco/ui/mcologo.gif" width="236" height="80" border="0" vspace="0" hspace="0" align="top" alt="Home"></a></td>
+
+			<!-- AD CALL GOES HERE -->
+ 			<td align="center" valign="middle" background="http://images.ea.com/eagames/official/mco/ui/leather_tile.jpg">
+</td>
+		</tr>
+			
+		<tr background="http://images.ea.com/eagames/official/mco/ui/gray_tile.jpg">
+			<td height="26" align="center" nowrap valign="top" colspan="2"  background="http://images.ea.com/eagames/official/mco/ui/gray_tile.jpg">
+
+				<!-- GRAY BAR CELL IN TITLE BAR TABLE -->
+				<table border="0" cellpadding="0" cellspacing="0" height="26" width="94" align="center">
+				<!-- NESTED TABLE KEEPS THE GRAY BUTTONS FROM SPREADING OUT IN THE CELL -->
+				<tr valign="top">
+					<td nowrap align="center" width="94" height="24"></td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+		</table>
+	</td>
+</tr> <!-- HEADER ROW ENDS -->
+
+<tr> <!-- NAV & CONTENT ROW BEGINS -->
+  <td background="http://images.ea.com/eagames/official/mco/ui/shim.gif" align="left" valign="top">
+	 	<table cellpadding="0" cellspacing="0" border="0" width="760" background="http://images.ea.com/eagames/official/mco/ui/shim.gif">
+		<tr>
+			<td width="141" nowrap align="left" valign="top" background="http://images.ea.com/eagames/official/mco/ui/vert_leath_tile.jpg">
+				<table border="0" cellspacing="0" cellpadding="0" align="left" width="141">
+
+
+				<tr>
+					<td background="http://images.ea.com/eagames/official/mco/ui/vert_leath_tile.jpg" nowrap width="141" align="center">&nbsp;</td>
+				</tr>
+
+				</table>
+			</td>
+			<td valign="top" align="left" width="99%" background="http://images.ea.com/eagames/official/mco/ui/shim.gif">
+				<table width="619" cellpadding="0" align="left" cellspacing="0" border="0" background="http://images.ea.com/eagames/official/mco/ui/shim.gif">
+				<tr>
+					<td align="left" valign="top" background="http://images.ea.com/eagames/official/mco/ui/shim.gif">
+			 			<table width="619" border="0" cellspacing="0" cellpadding="0" background="http://images.ea.com/eagames/official/mco/ui/shim.gif">
+						<tr> <!-- MAIN CONTENT BEGINS -->
+							<td width="445" align="left" valign="top"> <!-- MID CONTENT BEGINS -->
+								<table border="0" cellspacing="0" cellpadding="0" width="445" background="http://images.ea.com/eagames/official/mco/ui/shim.gif">
+								<tr>
+									<td colspan="2"><img src="http://images.ea.com/eagames/official/mco/content/home/home_banner_welcome.gif" width="445" height="30" vspace="0" hspace="0" border="0"></td>
+								</tr>
+								<tr>
+									<td colspan="2"><img src="http://images.ea.com/eagames/official/mco/content/home/home_banner_0204_cobravvette.jpg" width="445" height="118" vspace="0" hspace="0" border="0"></td>
+								</tr>
+
+								<tr>
+									<td colspan="2"><img src="http://images.ea.com/eagames/official/mco/content/home/home_banner_flag.jpg" width="445" height="64" vspace="0" hspace="0" border="0"></td>
+								</tr>
+								</table>
+
+								<table width="445" border="0" cellspacing="0" cellpadding="0" background="http://images.ea.com/eagames/official/mco/content/home/home_paper_tile.jpg">
+								<tr> <!-- ANNOUNCEMENTS SECTION BEGINS -->
+									<td valign="top">
+										<table width="445" border="0" cellspacing="0" cellpadding="0" background="http://images.ea.com/eagames/official/mco/ui/shim.gif">
+
+							 			<tr> <!-- BLUE PILL -->
+											<td class="mcobody" valign="top" colspan="3"><br>
+												&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://images.ea.com/eagames/official/mco/content/pill_left_blue.gif" width="12" height="20" vspace="0" hspace="0" border="0"><img src="http://images.ea.com/eagames/official/mco/pills/important_announcement.gif" width="228" height="20" vspace="0" hspace="0" border="0"><img src="http://images.ea.com/eagames/official/mco/content/pill_right_blue.gif" width="20" height="20" vspace="0" hspace="0" border="0"></td>
+										</tr>
+
+										<tr> <!-- Msg -->
+											<td class="mcobody" valign="top" width="35">&nbsp;</td>
+											<td class="paddedbody" valign="top" width="299">
+											
+											
+											
+											
+								 		  	<span class="black10"><font color="#993333">
+								 		  	8/29/03, 9:00 AM PST</font> (GMT -08:00)</span><br>
+								 		  	<b><font color="#993333">
+												Motor City Says Goodbye</font></b><br>
+												We at Electronic Arts and MCO Staff both past and present would like to say thank you for being a part of a great online racing game experience.  Motor City Online service ends today, but it will live on forever in the hearts of the racers who loved the game.  
+<br><br>
+Thank you for all your enthusiasm for Motor City Online and making it such a great place to play.
+<br><br>
+ 
+
+Regards,
+<br>
+MCO Staff
+<br><br>
+
+<span class="black10"><font color="#993333">
+								 		  	8/26/03, 9:00 AM PST</font> (GMT -08:00)</span><br>
+								 		  	<b><font color="#993333">Want more racing action?</font></b><br>
+											Head to the official <a href="http://www.needforspeed.com/">needforspeed.com site</a> to get a taste of Need for Speed Hot Pursuit 2 and the upcoming Need for Speed Underground. <br><br>
+											</td> <!-- STORY IMAGE -->
+									 		<td align="right" valign="top" width="111"><img src="http://images.ea.com/eagames/official/mco/inserts/pic25_small.jpg" width="111" height="83" vspace="5" hspace="0" border="0"></td>
+										</tr>
+
+							 			<tr> <!-- ANNOUNCEMENTS PILL -->
+											<td class="mcobody" valign="top" colspan="3"><br>
+												&nbsp;&nbsp;&nbsp;&nbsp;<a href="news/news.jsp"><img src="http://images.ea.com/eagames/official/mco/content/pill_left.gif" width="12" height="20" vspace="0" hspace="0" border="0"><img src="http://images.ea.com/eagames/official/mco/pills/news_and_announcements.gif" width="230" height="20" vspace="0" hspace="0" border="0"><img src="http://images.ea.com/eagames/official/mco/content/pill_right.gif" width="20" height="20" vspace="0" hspace="0" border="0"></a></td>
+										</tr>
+										
+										<tr> <!-- Msg -->
+											<td class="mcobody" valign="top" width="35">&nbsp;</td>
+											<td class="paddedbody" valign="top" width="299">
+								 		  	<span class="black10"><font color="#993333">
+								 		  	Motor City Online is now closed.</font> </span><br>
+								 		  	<br><br>
+											</td> <!-- STORY IMAGE -->
+									 		</td>
+										</tr>
+																				
+                  </table>
+				          </td>
+  							</tr>
+
+								<tr>
+									<td><img src="http://images.ea.com/eagames/official/mco/content/home/home_paper_bottom.jpg" width="445" height="25" vspace="0" hspace="0" border="0"></td>
+								</tr>
+								</table>
+							</td>
+
+							<!-- RIGHT COLUMN BEGINS -->
+							<td width="212" align="left" valign="top" background="http://images.ea.com/eagames/official/mco/ui/shim.gif">
+								<!-- RIBBON BEGINS -->
+								<table width="164" border="0" cellspacing="0" cellpadding="0">
+
+								<tr>
+
+								</tr>
+
+
+								</table>
+
+								<!-- HIGHLIGHTS BEGINS -->
+
+
+
+								<!-- ICONS BEGIN -->
+								<table width="164" border="0" cellspacing="0" cellpadding="0">
+								
+								<tr>
+									<td align="center">
+										
+										<br>
+									</td>
+								</tr>
+
+							<!--	<tr>  NOTICE 
+									<td align="center" class="black10">
+										THERE IS A SUBSCRIPTION FEE FOR THIS PRODUCT.  Electronic Arts charges a monthly fee for this service, separate from your Internet Service Provider access charges.
+						 			</td>
+								</tr>
+							-->
+								</table>
+							</td> <!-- RIGHT COLUMN ENDS -->
+						</tr> <!-- MAIN CONTENT ENDS -->
+						</table>
+					</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+		</table>
+	</td>
+</tr> <!-- NAV & CONTENT ROW ENDS -->
+
+<tr> <!-- FOOTER ROW BEGINS -->
+	<td>
+		<table border="0" cellspacing="0" cellpadding="0" width="100%">
+		<tr valign="middle">
+			<td width="141" background="http://images.ea.com/eagames/official/mco/ui/vert_leath_tile.jpg" align="left" height="1" valign="top"><img src="http://images.ea.com/eagames/official/mco/ui/shim.gif" width="141" vspace="0" hspace="0" border="0" height="1"></td>
+			<td nowrap align="left" colspan="4" background="http://images.ea.com/eagames/official/mco/ui/footerborder_tile.jpg" height="6"><img src="http://images.ea.com/eagames/official/mco/ui/shim.gif"></td>
+		</tr>
+
+		<tr valign="middle">
+			<td width="141" background="http://images.ea.com/eagames/official/mco/ui/vert_leath_tile.jpg" align="center"><a href="http://www.ea.com/global/legal/privacy.jsp" target="_blank"><img src="http://images.ea.com/footer/new_privacycertified.jpg" alt="Privacy Policy" border="0" width="116" height="43" vspace="0" hspace="0"></a></td>
+			<td nowrap align="left" bgcolor="#CCCCCC" width="20"><img src="http://images.ea.com/eagames/official/mco/ui/shim.gif"></td>
+			<td nowrap align="left" bgcolor="#CCCCCC" width="75">
+				<div align="left"><a href="http://www.eagames.com" target="_blank"><font color="#CCCCCC"><img src="http://images.ea.com/eagames/official/mco/ui/ealogo.gif" width="74" height="74" border="0" alt="EA Games" vspace="0" hspace="0"></font></a></div>
+			</td>
+	 		<td align="center" bgcolor="#CCCCCC" class="footer" width="657">
+				<p>&copy; 2003 EA.com Inc. All rights reserved.<br>
+				All trademarks are the property of their respective owners.<br>
+				<span class="footerlink"><a href="javascript:void(0)" onMouseOver="window.status='Advertise'; return true" onMouseOut="window.status=''; return true" onClick="javascript:window.open('http://www.ea.com/global/corporate/advertise.jsp','PopUpPage','toolbar=no,width=653,height=600,resizable,scrollbars');" class="footerlink">Advertise</a> 
+				| <a href="javascript:void(0)" onMouseOver="window.status='Legal Notices'; return true" onMouseOut="window.status=''; return true" onClick="javascript:window.open('http://www.ea.com/global/legal/legalnotice.jsp','PopUpPage','toolbar=no,width=580,height=600,resizable,scrollbars');" class="footerlink">Legal Notices</a> 
+				| <a href="javascript:void(0)" onMouseOver="window.status='Terms of Service'; return true" onMouseOut="window.status=''; return true" onClick="javascript:window.open('http://www.ea.com/global/legal/tos.jsp','PopUpPage','toolbar=no,width=580,height=600,resizable,scrollbars');" class="footerlink">Terms of Service</a> 
+				| <a href="javascript:void(0)" onMouseOver="window.status='Privacy Policy'; return true" onMouseOut="window.status=''; return true" onClick="javascript:window.open('http://www.ea.com/global/legal/privacy.jsp','PopUpPage','toolbar=no,width=580,height=600,resizable,scrollbars');" class="footerlink">Privacy Policy</a> 
+				| <a href="javascript:void(0)" onMouseOver="window.status='Corporate Info'; return true" onMouseOut="window.status=''; return true" onClick="javascript:window.open('http://www.ea.com/global/corporate/corporateinfo.jsp','PopUpPage','toolbar=no,width=440,height=400,resizable,scrollbars');" class="footerlink">Corporate Info</a> 
+				| <a href="javascript:void(0)" onMouseOver="window.status='Jobs'; return true" onMouseOut="window.status=''; return true" onClick="javascript:window.open('http://jobs.ea.com/recruiter.html','PopUpPage','toolbar=yes,width=800,height=580,resizable,scrollbars');" class="footerlink">Jobs</a><br>
+				</span><font color="#993333"><b><font color="#000000">Keyword:</font> Motor City Online</b></font>
+				</p>
+	 		</td>
+	 		<td bgcolor="#CCCCCC" align="right" width="*" nowrap>
+				<div align="left"><a href="http://www.esrb.org/code" target="_blank"><img src="http://images.ea.com/eagames/official/mco/ui/eicon.jpg" width="54" height="76" border="0" alt="Violence & Mild Language"></a></div>
+			</td>
+		</tr>
+		</table>
+	</td>
+</tr> <!-- FOOTER ROW ENDS -->
+</table>
+</body>
+</html>
