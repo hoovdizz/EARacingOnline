@@ -420,7 +420,7 @@ else if($num_cars_behind_header < 4)
 <!-- EA Racing local archive: Top 50 capture-history index. Original page layout retained. -->
 <script type="text/javascript">
 (function() {
-  var captures = [{"stamp":"20010406032233","date":"2001-04-06","time":"03:22:33","href":"Top50-History/HS_Top50_2001-04-06_03-22-33.html"},{"stamp":"20010603111829","date":"2001-06-03","time":"11:18:29","href":"Top50-History/HS_Top50_2001-06-03_11-18-29.html"},{"stamp":"20011211011114","date":"2001-12-11","time":"01:11:14","href":"Top50-History/HS_Top50_2001-12-11_01-11-14.html"},{"stamp":"20020208005519","date":"2002-02-08","time":"00:55:19","href":"Top50-History/HS_Top50_2002-02-08_00-55-19.html"},{"stamp":"20020804174348","date":"2002-08-04","time":"17:43:48","href":"Top50-History/HS_Top50_2002-08-04_17-43-48.html"},{"stamp":"20030412201757","date":"2003-04-12","time":"20:17:57","href":"Top50-History/HS_Top50_2003-04-12_20-17-57.html"},{"stamp":"20030603175628","date":"2003-06-03","time":"17:56:28","href":"Top50-History/HS_Top50_2003-06-03_17-56-28.html"}];
+  var captures = [{"stamp":"Discord","date":"Today","time":"","href":"Top50-History/HS_Top50_discord.php"},{"stamp":"HOSS","date":"Today","time":"","href":"Top50-History/HS_Top50_hoss.php"},{"stamp":"20010406032233","date":"2001-04-06","time":"03:22:33","href":"Top50-History/HS_Top50_2001-04-06_03-22-33.html"},{"stamp":"20010603111829","date":"2001-06-03","time":"11:18:29","href":"Top50-History/HS_Top50_2001-06-03_11-18-29.html"},{"stamp":"20011211011114","date":"2001-12-11","time":"01:11:14","href":"Top50-History/HS_Top50_2001-12-11_01-11-14.html"},{"stamp":"20020208005519","date":"2002-02-08","time":"00:55:19","href":"Top50-History/HS_Top50_2002-02-08_00-55-19.html"},{"stamp":"20020804174348","date":"2002-08-04","time":"17:43:48","href":"Top50-History/HS_Top50_2002-08-04_17-43-48.html"},{"stamp":"20030412201757","date":"2003-04-12","time":"20:17:57","href":"Top50-History/HS_Top50_2003-04-12_20-17-57.html"},{"stamp":"20030603175628","date":"2003-06-03","time":"17:56:28","href":"Top50-History/HS_Top50_2003-06-03_17-56-28.html"}];
   function text(el) { return (el.innerText || el.textContent || '').replace(/\s+/g,' ').replace(/^\s+|\s+$/g,''); }
   function firstTextLeaf(cell) {
     var node = cell;
@@ -467,7 +467,9 @@ else if($num_cars_behind_header < 4)
 
   var header = best.rows[bestHeader];
   var labels = ['#','Capture Date','Time (UTC)','Wayback Stamp','Archived Page'];
-  for (var hc=0; hc<header.cells.length; hc++) setCell(header.cells[hc], hc < labels.length ? labels[hc] : '', null);
+  while (header.cells.length > labels.length) header.deleteCell(header.cells.length - 1);
+  while (rowTemplate.cells.length > labels.length) rowTemplate.deleteCell(rowTemplate.cells.length - 1);
+  for (var hc=0; hc<header.cells.length; hc++) setCell(header.cells[hc], labels[hc], null);
 
   // Insert new rows immediately after the original header using cloned original styling.
   var parent = header.parentNode;
