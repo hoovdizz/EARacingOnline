@@ -25,6 +25,10 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 <script language="JavaScript1.2" SRC="../scripts/fw_menu_abs.js">
 </script>
 <script LANGUAGE="JavaScript1.1" SRC="http://ads.web.aol.com/file/adsWrapper.js"></script>
+<style id="site-centering" type="text/css">
+html { text-align: center; }
+body { display: inline-block; margin-left: auto; margin-right: auto; position: relative; text-align: left; }
+</style>
 </head>
 <body bgcolor="#FFFFFF" text="#000000" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" link="#993333" vlink="#993333" alink="#993333" background="../images/ui/beige.jpg" onLoad="MM_preloadImages('../images/ui/tier1over.gif','../images/ui/tier2over.gif','../images/ui/buynow_button_over.gif','../images/ui/signup_button_over.gif')">
 
@@ -72,9 +76,9 @@ fwLoadMenus();
 			 <!-- NESTED TABLE KEEPS THE BRAY BUTTONS FROM SPREADING OUT IN THE CELL -->
 							
 			 <tr valign="top">
-				<td nowrap align="center" width="94" height="24"><a href="../store.html" target="_blank" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('buynow_button','','../images/ui/buynow_button_over.gif',1)"><img name="buynow_button" src="../images/ui/buynow_button.gif" border="0" alt="Order Now" vspace="0" hspace="0" width="112" height="26"></a></td>
+				<td nowrap align="center" width="94" height="24"><a href="../downloads/back_online.html" target="_blank" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('buynow_button','','../images/ui/buynow_button_over.gif',1)"><img name="buynow_button" src="../images/ui/buynow_button.gif" border="0" alt="Order Now" vspace="0" hspace="0" width="112" height="26"></a></td>
 				<td nowrap align="center" width="94" height="24"><!-- EA/NFS link disabled; original href: http://www.ea.com/SubscribeEntry.jsp?prodID=REG-MCO --><a onclick="alert(&#39;This link is dead. It used to go to &quot;http://www.ea.com/SubscribeEntry.jsp?prodID=REG-MCO&quot;&#39;); return false;" href="javascript:void(0)" target="_blank" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('registercd_button','','../images/ui/registercd_button_over.gif',1)"><img name="registercd_button" src="../images/ui/registercd_button.gif" border="0" alt="Register CD" vspace="0" hspace="0" width="112" height="26"></a></td>
-				<td nowrap align="center" width="94" height="24"><a href="../accountinfo.html" target="_blank" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('accountinfo_button','','../images/ui/accountinfo_button_over.gif',1)"><img name="accountinfo_button" src="../images/ui/accountinfo_button.gif" border="0" alt="My Account Info" vspace="0" hspace="0" width="112" height="26"></a></td>
+				<td nowrap align="center" width="94" height="24"><a href="https://discord.com/channels/669396866495938592/976177913420468306" target="_blank" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('accountinfo_button','','../images/ui/accountinfo_button_over.gif',1)"><img name="accountinfo_button" src="../images/ui/accountinfo_button.gif" border="0" alt="My Account Info" vspace="0" hspace="0" width="112" height="26"></a></td>
 			 </tr>
 			</table>
 
@@ -123,13 +127,7 @@ fwLoadMenus();
 				</tr>
 
 				<tr> 
-			 		<td width="141" background="../images/ui/nav_button_tile.jpg" valign="middle" align="left" nowrap height="16"><span class="leftnavlg"><img src="../images/ui/tier1out.gif" width="34" height="16" border="0" vspace="0" hspace="0" align="texttop">GAMES</span></td>
-			 		</tr>
-			 		<tr>
-			 		  <td width="141" background="../images/ui/nav_button_tile.jpg" valign="middle" align="left" nowrap height="16"><a href="../../HS/HighStakes.html" class="leftnavlg"><img src="../images/ui/tier2out.gif" width="34" height="16" border="0" vspace="0" hspace="0" align="texttop">HIGH STAKES</a></td>
-			 		</tr>
-			 		<tr>
-			 		  <td width="141" background="../images/ui/nav_button_tile.jpg" valign="middle" align="left" nowrap height="16"><a href="../../PU/PorscheUnleashed.html" class="leftnavlg"><img src="../images/ui/tier2out.gif" width="34" height="16" border="0" vspace="0" hspace="0" align="texttop">PORSCHE UNLEASHED</a></td>
+			 		<td width="141" background="../images/ui/nav_button_tile.jpg" valign="middle" align="left" nowrap height="16"><a href="../main.html" onMouseOut="MM_swapImgRestore(); FW_startTimeout();" onMouseOver="MM_swapImage('GAMES','','../images/ui/tier1over.gif',1); FW_showMenu(fw_menu_games, 120, 312);" class="leftnavlg"><img name="GAMES" src="../images/ui/tier1out.gif" width="34" height="16" border="0" vspace="0" hspace="0" align="texttop">GAMES</a></td>
 			 		</tr>
 			 		<tr>
 			 		<td width="141" background="../images/ui/nav_button_tile.jpg" align="left" height="4" valign="top" nowrap> <img src="../images/ui/left_nav_base.gif"></td>

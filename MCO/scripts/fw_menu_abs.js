@@ -712,6 +712,7 @@ function fwLoadMenus() {
   fw_menu_development.addMenuItem("Team Comments","location=mcoMenuUrl('development/team_comments.html')");
   	fw_menu_development.hideOnMouseOut=true;
   window.fw_menu_downloads = new Menu("root",120,15,"Arial, Helvetica, sans-serif",10,"#ffffff","#ffff33","#222222","#444444");
+  fw_menu_downloads.addMenuItem("Back Online","location=mcoMenuUrl('downloads/back_online.html')");
   fw_menu_downloads.addMenuItem("Desktop Hot Rod","location=mcoMenuUrl('downloads/hot_rod.html')");
   fw_menu_downloads.addMenuItem("Movies","location=mcoMenuUrl('downloads/movies.html')");
   fw_menu_downloads.addMenuItem("Wallpapers","location=mcoMenuUrl('downloads/wallpapers.html')");
@@ -739,5 +740,11 @@ function fwLoadMenus() {
   fw_menu_gamehelp.addMenuItem("Contact Us","location=mcoMenuUrl('gamehelp/contact_us.html')");
   	fw_menu_gamehelp.hideOnMouseOut=true;
 
-  fw_menu_gamehelp.writeMenus();
+  window.fw_menu_games = new Menu("root",120,15,"Arial, Helvetica, sans-serif",10,"#ffffff","#ffff33","#222222","#444444");
+  fw_menu_games.addMenuItem("High Stakes","location=mcoMenuUrl('../HS/HighStakes.html')");
+  fw_menu_games.addMenuItem("Porsche Unleashed","location=mcoMenuUrl('../PU/PorscheUnleashed.html')");
+  fw_menu_games.addMenuItem("Motor City Online","location=mcoMenuUrl('main.html')");
+  	fw_menu_games.hideOnMouseOut=true;
+
+  fw_menu_games.writeMenus();
 } // fwLoadMenus()
