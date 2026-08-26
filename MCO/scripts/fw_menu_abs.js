@@ -434,11 +434,16 @@ function onMenuItemOver(e, l) {
 }
 
 function onMenuItemAction(e, l) {
-	l = window.ActiveMenuItem;
+	l = l || this || window.ActiveMenuItem;
 	if (!l) return;
 	hideActiveMenus();
 	if (l.action) {
-		eval("" + l.action);
+		var localAction = /^location=mcoMenuUrl\('([^']+)'\)$/.exec(l.action);
+		if (localAction) {
+			window.location.href = mcoMenuUrl(localAction[1]);
+		} else {
+			eval("" + l.action);
+		}
 	}
 	window.ActiveMenuItem = 0;
 }
